@@ -1,0 +1,76 @@
+
+.homePage_primaryHeading {
+   margin-bottom: 10px;
+}
+.homePage_container {
+    display: flex;
+    justify-content: center;  
+}
+.avatar_box {
+    position: relative;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    overflow: hidden; 
+    transition: transform 1s;
+}
+.avatar_box:hover {
+    /* сдвигаем при наведении */
+    // transform: skew(20deg, 10deg);
+  }
+.avatar {
+    position: absolute;
+    right: 56px;
+    height: 300px;
+    width: 225px;
+    transform: scale(1.5);
+}
+
+.homePage_text {
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+
+.homePage_projectsBtn {
+   
+}
+.homePage_featuresList {
+    margin-left:20px; 
+    margin-bottom: 10px; 
+}
+.homePage_feature {
+    list-style-type: disc;
+}
+.homePage_paragraph {
+    margin-bottom: 5px;
+}
+
+@media (max-width:575px) { 
+    .homePage_container {
+        display: grid;
+        grid-template-rows: repeat(2, auto);  
+    }
+    
+    .homePage_primaryHeading {
+        text-align: center;
+        margin: 10px;
+    }
+    .homePage_purposes {
+        text-align: center; 
+    }
+    .homePage_projectsBtn {
+        text-align: center;
+        margin: 10px;
+    }
+    .homePage_featuresList {
+        margin: 10px;
+    }
+    .avatar_box {
+        margin: 10px;
+    }
+    .homePage_text {
+        margin: 10px;
+    }
+}
