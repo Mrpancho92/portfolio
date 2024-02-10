@@ -15,7 +15,7 @@ const Page404 = () => {
             </Helmet>
             <ErrorMessage/>
             <p style={{'textAlign': 'center', 'fontWeight': 'bold', 'fontSize': '24px'}}>Page doesn't exist</p>
-            <Link style={{'display': 'block', 'textAlign': 'center','fontWeight': 'bold', 'fontSize': '24px','marginTop': '30px'}} to="/portfolio/home">Back to main page</Link>
+            <Link style={{'display': 'block', 'textAlign': 'center','fontWeight': 'bold', 'fontSize': '24px','marginTop': '30px'}} to="/home">Back to main page</Link>
         </div>
     )
 }
