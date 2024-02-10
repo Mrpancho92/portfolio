@@ -29,12 +29,12 @@ const App = () => {
                 <main>
                     <Suspense fallback={<Spinner/>}>
                         <Routes>
-                            <Route index element={<Navigate to="/portfolio/" replace />} />
-                            <Route path="/portfolio/home" element={<HomePage />} />
+                            <Route index element={<Navigate to="/home" replace />} />
+                            <Route path="/home" element={<HomePage />} />
                             <Route path="/projects" element={<ProjectPage />} />
                             <Route path="/about" element={ <AboutPage />} />
                             <Route path="/contact" element={<ContactPage />}/>
-                            <Route path="*" element={<Page404/>} />
+                            <Route path="*" element={<HomePage />} />
                         </Routes>
                     </Suspense>
                 </main>

@@ -9,7 +9,7 @@ console.log('render4');
             <label htmlFor="burger-checkbox" className="burger"></label>
                 <ul className='menu-list'>
                     <li className='navLi'>
-                        <NavLink className="menu-item" to="/portfolio/home">Home</NavLink>
+                        <NavLink className="menu-item" to="/home">Home</NavLink>
                     </li>
 
                     <li className='navLi'>
