@@ -22,6 +22,15 @@ const ContactPage = lazy(() => import('../components/pages/ContactPage/ContactPa
 // }
 
 const App = () => {
+    var _hash = window.location.hash;
+if( _hash ){
+var x = parseInt( window.location.hash.replace("#", ""));
+x = x+1;
+window.location.hash=x;
+console.log(x);
+}else{
+  window.location.hash = "1"
+}
     return (
         <Router>
             <div className="app">
