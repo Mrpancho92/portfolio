@@ -9,19 +9,19 @@ console.log('render4');
             <label htmlFor="burger-checkbox" className="burger"></label>
                 <ul className='menu-list'>
                     <li className='navLi'>
-                        <NavLink className="menu-item" to="/portfolio/home">Home</NavLink>
+                        <NavLink className="menu-item" to="/home">Home</NavLink>
                     </li>
 
                     <li className='navLi'>
-                        <NavLink className="menu-item" to="/portfolio/projects">Projects</NavLink>
+                        <NavLink className="menu-item" to="/projects">Projects</NavLink>
                     </li>
 
                     <li className='navLi'>
-                        <NavLink className="menu-item" to="/portfolio/about">About me</NavLink>
+                        <NavLink className="menu-item" to="/about">About me</NavLink>
                     </li>
 
                     <li className='navLi'>
-                        <NavLink className="menu-item" to="/portfolio/contact">Contact</NavLink>
+                        <NavLink className="menu-item" to="/contact">Contact</NavLink>
                     </li>
                 </ul>
         </div>

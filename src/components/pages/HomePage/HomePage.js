@@ -48,7 +48,7 @@ const HomePage = () => {
                                 <li className="homePage_feature">Intuitive UX/UI designs</li>
                             </ul>
                         </div>
-                        <Link className="d-flex justify-content-center mb-3 btn btn-primary homePage_projectsBtn" to="/portfolio/projects">See my projects
+                        <Link className="d-flex justify-content-center mb-3 btn btn-primary homePage_projectsBtn" to="/projects">See my projects
                         </Link>
                         <IconsBar onChange={counter}/>
                     </div>
