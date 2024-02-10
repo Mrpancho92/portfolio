@@ -41,7 +41,7 @@ const AppHeader = () => {
                 { isMobile ?  <BurgerMenu/> :
                 <ul>
                         <li className='navLi'>
-                            <NavLink className="animated" to="/home">Home</NavLink>
+                            <NavLink className="animated" to="/portfolio/home">Home</NavLink>
                         </li>
 
                         <li className='navLi'>
