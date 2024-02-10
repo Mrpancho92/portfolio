@@ -34,7 +34,7 @@ const ProjectPage = () => {
     useEffect(() => {
         // 'https://projectdata-f0pl.onrender.com/cards'
         // 'http://localhost:3000/cards'
-        getdata('http://localhost:3000/cards').then(onLoaded).then(() => setProcess('confirmed'))
+        getdata('https://projectdata-f0pl.onrender.com/cards').then(onLoaded).then(() => setProcess('confirmed'))
     }, [])
    
     const onLoaded = (list) => {
