@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "version": "0.1.0",
-  "homepage": "https://github.com/Mrpancho92/MrPancho_portfolio",
+  "homepage": "https://github.com/Mrpancho92/portfolio",
   "private": true,
   "dependencies": {
     "@babel/plugin-transform-private-property-in-object": "^7.23.4",
