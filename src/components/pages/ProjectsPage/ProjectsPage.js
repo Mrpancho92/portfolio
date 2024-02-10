@@ -27,16 +27,14 @@ import IsMobileHomePage from "../../isMobile/isMobileHomePage";
 
 const ProjectPage = () => {
     const [data, setData] = useState([]);
-
-    // useEffect(() => {
-
-    // }, [])
-    
+  
     IsMobileHomePage();
     console.log('render2');
     const {getdata, process, setProcess} =  useMrPanchoService();
     useEffect(() => {
-        getdata('https://projectdata-f0pl.onrender.com/cards').then(onLoaded).then(() => setProcess('confirmed'))
+        // 'https://projectdata-f0pl.onrender.com/cards'
+        // 'http://localhost:3000/cards'
+        getdata('http://localhost:3000/cards').then(onLoaded).then(() => setProcess('confirmed'))
     }, [])
    
     const onLoaded = (list) => {
@@ -88,9 +86,9 @@ const ProjectPage = () => {
                         </div>
                     </div>
                     <div className="Card_btnContainer">
-                        <Link to={item.linkWebsite}>Go to the website</Link>
+                        <Link className="d-flex justify-content-center btn btn-primary" to={item.linkWebsite}>Go to the website</Link>
                         <br/>
-                        <Link to={item.linkGitHubRepo}>GitHub repo</Link>
+                        <Link className="d-flex justify-content-center btn btn-primary" to={item.linkGitHubRepo}>GitHub repo</Link>
                     </div>
                 </div>
             </div>

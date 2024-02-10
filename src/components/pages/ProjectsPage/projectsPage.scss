@@ -2,8 +2,11 @@
    margin: 0 10%;
 }
 .ProjectPage_bg {
-   
     margin: 0 20px 20px  20px ;
+}
+.ProjectPage_bg h1 {
+    font-size: 40px;
+    margin: 0 20px 0 20px;
 }
 .Card_projectName {
     font-weight: 700;
@@ -21,7 +24,7 @@
 .ProjectPage_card {
     display: flex;
     top: 20px;
-    background-color: gray;
+    background-color: rgb(225, 225, 225);
     padding: 20px 0;
     border-radius: 20px;
 }
@@ -47,6 +50,7 @@
 .Card_content_bg {
     display: flex;
     flex-wrap: wrap;
+    align-content: space-between;
 }
 .Card_content {
     width: 100%;
@@ -54,6 +58,7 @@
 .Card_btnContainer {
     display: flex;
     width: 100%;
+    height: 15%;
     flex-direction: row;
     gap: 2%;
     & a {
@@ -67,6 +72,12 @@
     font-size: 18px; 
     margin-left: 20px;
 }
+.Card_technologyStack {
+    font-size: 18px;
+}
+.Card_mainFeatures {
+    font-size: 18px;
+}
 
 @media (max-width:575px) { 
     .ProjectPage {
@@ -77,11 +88,30 @@
     }
 
     .ProjectPage_card {
-        display: block;
+        display: flex;
+        flex-flow:column-reverse;
+        justify-content: center;
+        gap: 18px;
+    }
+    .Card_listContainer {
+        gap: 4%;
+    }
+    .Card_technologyStack {
+        min-width: 130px;
+        font-size: 18px;
+    }
+
+    .Card_mainFeatures {
+        font-size: 18px;
+    }
+    
+    .Card_content_bg {
+       margin: 0 18px 0 18px;
+       gap: 18px;
     }
     .Card_imageContainer {
         width: 91%;
-        height: 100%;
+        height: 100%;   
     }
     .Card_image {
         max-Width: 100%;
