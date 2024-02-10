@@ -23,13 +23,11 @@ const ContactPage = lazy(() => import('../components/pages/ContactPage/ContactPa
 
 const App = () => {
     var _hash = window.location.hash;
+    console.log(_hash);
 if( _hash ){
 var x = parseInt( window.location.hash.replace("#", ""));
 x = x+1;
 window.location.hash=x;
-if (x > 0) {
-    window.location.replace = "https://mrpancho92.github.io/portfolio/";
-}
 console.log(x);
 }else{
   window.location.hash = "1"
