@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/Mrpancho92/portfolio/static/css/main.65ceb2de.css",
-    "main.js": "/Mrpancho92/portfolio/static/js/main.8084ad83.js",
+    "main.js": "/Mrpancho92/portfolio/static/js/main.f5806f56.js",
     "static/js/912.78d8999b.chunk.js": "/Mrpancho92/portfolio/static/js/912.78d8999b.chunk.js",
     "static/css/800.f19f48c4.chunk.css": "/Mrpancho92/portfolio/static/css/800.f19f48c4.chunk.css",
     "static/js/800.ad37287f.chunk.js": "/Mrpancho92/portfolio/static/js/800.ad37287f.chunk.js",
     "static/css/260.592ccb46.chunk.css": "/Mrpancho92/portfolio/static/css/260.592ccb46.chunk.css",
-    "static/js/260.d85f7115.chunk.js": "/Mrpancho92/portfolio/static/js/260.d85f7115.chunk.js",
+    "static/js/260.9bdaf720.chunk.js": "/Mrpancho92/portfolio/static/js/260.9bdaf720.chunk.js",
     "static/js/368.4f647cc9.chunk.js": "/Mrpancho92/portfolio/static/js/368.4f647cc9.chunk.js",
     "static/js/488.c3774414.chunk.js": "/Mrpancho92/portfolio/static/js/488.c3774414.chunk.js",
     "static/js/496.10af9ff3.chunk.js": "/Mrpancho92/portfolio/static/js/496.10af9ff3.chunk.js",
@@ -18,18 +18,18 @@
     "static/media/error.gif": "/Mrpancho92/portfolio/static/media/error.42292aa12b6bc303ce99.gif",
     "index.html": "/Mrpancho92/portfolio/index.html",
     "main.65ceb2de.css.map": "/Mrpancho92/portfolio/static/css/main.65ceb2de.css.map",
-    "main.8084ad83.js.map": "/Mrpancho92/portfolio/static/js/main.8084ad83.js.map",
+    "main.f5806f56.js.map": "/Mrpancho92/portfolio/static/js/main.f5806f56.js.map",
     "912.78d8999b.chunk.js.map": "/Mrpancho92/portfolio/static/js/912.78d8999b.chunk.js.map",
     "800.f19f48c4.chunk.css.map": "/Mrpancho92/portfolio/static/css/800.f19f48c4.chunk.css.map",
     "800.ad37287f.chunk.js.map": "/Mrpancho92/portfolio/static/js/800.ad37287f.chunk.js.map",
     "260.592ccb46.chunk.css.map": "/Mrpancho92/portfolio/static/css/260.592ccb46.chunk.css.map",
-    "260.d85f7115.chunk.js.map": "/Mrpancho92/portfolio/static/js/260.d85f7115.chunk.js.map",
+    "260.9bdaf720.chunk.js.map": "/Mrpancho92/portfolio/static/js/260.9bdaf720.chunk.js.map",
     "368.4f647cc9.chunk.js.map": "/Mrpancho92/portfolio/static/js/368.4f647cc9.chunk.js.map",
     "488.c3774414.chunk.js.map": "/Mrpancho92/portfolio/static/js/488.c3774414.chunk.js.map",
     "496.10af9ff3.chunk.js.map": "/Mrpancho92/portfolio/static/js/496.10af9ff3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.65ceb2de.css",
-    "static/js/main.8084ad83.js"
+    "static/js/main.f5806f56.js"
   ]
 }
