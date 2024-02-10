@@ -30,10 +30,10 @@ const App = () => {
                     <Suspense fallback={<Spinner/>}>
                         <Routes>
                             {/* <Route index element={<Navigate to="/home" replace />} /> */}
-                            <Route path="/home" element={<HomePage />} />
-                            <Route path="/projects" element={<ProjectPage />} />
-                            <Route path="/about" element={ <AboutPage />} />
-                            <Route path="/contact" element={<ContactPage />}/>
+                            <Route path="/portfolio/home" element={<HomePage />} />
+                            <Route path="/portfolio/projects" element={<ProjectPage />} />
+                            <Route path="/portfolio/about" element={ <AboutPage />} />
+                            <Route path="/portfolio/contact" element={<ContactPage />}/>
                             <Route path="*" element={<HomePage />} />
                         </Routes>
                     </Suspense>
