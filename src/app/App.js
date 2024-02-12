@@ -44,7 +44,8 @@ const App = () => {
 // window.location.replace("http://localhost:3000/home");
  
    const url = localStorage.getItem('url');
-   window.history.replaceState(null, "New Page Title", "/portfolio")
+   console.log(window.location.href);
+//    window.history.replaceState(null, "New Page Title", "/")
 //    document.location.replace("/project",);
 // window.addEventListener('unload', function() {
 //     let currentURL = window.location.href;
