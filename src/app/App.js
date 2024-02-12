@@ -23,7 +23,9 @@ const ContactPage = lazy(() => import('../components/pages/ContactPage/ContactPa
 
 const App = () => {
     var _hash = window.location.hash;
-    console.log(_hash);
+    let _href = window.location.href;
+    // console.log(_hash);
+    console.log(_href);
 if( _hash ){
 var x = parseInt( window.location.hash.replace("#", ""));
 x = x+1;
