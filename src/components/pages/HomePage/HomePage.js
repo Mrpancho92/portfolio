@@ -13,7 +13,6 @@ import IsMobileHomePage from "../../isMobile/isMobileHomePage";
 const HomePage = () => {
     const counter = useSelector(state => state.counters.firstCounter);
     IsMobileHomePage();
-
     return (
         <>
             <Helmet>
