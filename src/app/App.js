@@ -21,16 +21,43 @@ const ContactPage = lazy(() => import('../components/pages/ContactPage/ContactPa
 //             </div>
 //     )
 // }
+// window.addEventListener('unload', function() {
+//     let currentURL = window.location.href;
+//     let index = currentURL.indexOf("/home");
+//     console.log(currentURL);
+    
+//     if(index > -1) {
+//         // window.location.replace("http://localhost:3000/project") ; 
+//         window.location.href = 'http://localhost:3000';
+//         console.log('dgdfghgddsfggdhf');
+//     }
+//     });
 
 const App = () => {
+    // console.log(window.location.href);
+    // window.location.href = 'http://localhost:3000';
     // var _hash = window.location.pathname;
     // // console.log(_hash);
     // console.log(_hash);
+    // useEffect(() => {
+    //     window.onbeforeunload = () => {
+    //         window.sessionStorage.setItem('lastRoute', JSON.stringify(window.location.href))
+    //     }
+    // },[])
+  
 
-    const localSave = () => {
-        localStorage.setItem('url', window.location.pathname);  
-    }
-    localSave();
+    // window.addEventListener('unload', function() {
+    //     const localSave = () => {
+    //         localStorage.setItem('url', window.location.href);  
+    //     }
+    //     localSave();
+            // let currentURL = window.location.href;
+            // let index = currentURL.indexOf("/home");
+            // console.log(currentURL);
+            // if(index > -1) {
+                 
+            // }
+            // });
 // if( _hash ){
 // let x = window.location.hash.replace("#", "/home");
 
@@ -43,19 +70,10 @@ const App = () => {
 // },[])
 // window.location.replace("http://localhost:3000/home");
  
-   const url = localStorage.getItem('url');
-   console.log(window.location.href);
+   
 //    window.history.replaceState(null, "New Page Title", "/")
 //    document.location.replace("/project",);
-// window.addEventListener('unload', function() {
-//     let currentURL = window.location.href;
-//     let index = currentURL.indexOf("/home");
-//     console.log(index);
-//     if(index > -1) {
-//         this.window.location.replace("http://localhost:3000/project") ; 
-//         console.log('dgdfghgddsfggdhf');
-//     }
-//     });
+
     // window.location.search = 'http://localhost:3000';
     return (
         <Router>

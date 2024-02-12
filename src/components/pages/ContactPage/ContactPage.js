@@ -5,6 +5,7 @@ import IsMobileHomePage from "../../isMobile/isMobileHomePage";
 
 const ContactPage = () => {
     IsMobileHomePage();
+    
     return (
         <>
             <Helmet>

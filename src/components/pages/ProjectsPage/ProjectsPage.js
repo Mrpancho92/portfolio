@@ -27,8 +27,9 @@ import IsMobileHomePage from "../../isMobile/isMobileHomePage";
 
 const ProjectPage = () => {
     const [data, setData] = useState([]);
-  
+    
     IsMobileHomePage();
+  
     console.log('render2');
     const {getdata, process, setProcess} =  useMrPanchoService();
     useEffect(() => {

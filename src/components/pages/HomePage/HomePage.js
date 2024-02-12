@@ -1,6 +1,7 @@
 // import { connect } from "react-redux";
 import { shallowEqual, useSelector } from "react-redux";
 import { useMediaQuery } from 'react-responsive';
+import { useEffect, useState } from 'react';
 import {Link} from 'react-router-dom';
 import { Helmet } from "react-helmet";
 import './HomePage.scss';
@@ -11,8 +12,24 @@ import { bool } from "prop-types";
 import IsMobileHomePage from "../../isMobile/isMobileHomePage";
 
 const HomePage = () => {
+    const [state, setState] = useState(false);
     const counter = useSelector(state => state.counters.firstCounter);
     IsMobileHomePage();
+   
+    // const localSave = () => {
+    //     localStorage.setItem('url', window.location.pathname);  
+    // }
+    // localSave();
+
+    // useEffect(() => {
+    //     console.log(state);
+    //     if (state === true) {
+           
+    //         window.location.href = 'http://localhost:3000'; 
+    //     } 
+    // },[state])
+ 
+    
     return (
         <>
             <Helmet>

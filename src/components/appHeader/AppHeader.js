@@ -26,6 +26,7 @@ const AppHeader = () => {
     }
     const dispatch = useDispatch();
     console.log('render1');
+   
     return (
         <header className="app__header">
             <Switch
