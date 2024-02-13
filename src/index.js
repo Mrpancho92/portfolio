@@ -18,9 +18,9 @@ const store = configureStore({
   root.render(
     // <React.StrictMode> 
     <Provider store={store} >
-    <HashRouter>
+    
       <App/>
-    </HashRouter>
+    
    </Provider>
     // </React.StrictMode>
   );

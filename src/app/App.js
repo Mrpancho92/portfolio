@@ -77,12 +77,13 @@ const App = () => {
 
     // window.location.search = 'http://localhost:3000';
     return (
-        <Router>
+       
+        <HashRouter>
             <div className="app">
                 <AppHeader />
                 <main>
-                <HashRouter basename="/portfolio">
                     <Suspense fallback={<Spinner/>}>
+                    
                         <Routes>
                             {/* <Route index element={<Navigate to="/portfolio" replace />} /> */}
                             {/* <Route path="/home" element={<HomePage />} />
@@ -96,11 +97,12 @@ const App = () => {
                             <Route path={"/contact"} element={<ContactPage />}/>
                             <Route path="*" element={<Page404 />} />
                         </Routes>
+                      
                     </Suspense>
-                    </HashRouter>
                 </main>
             </div>
-        </Router>
+        </HashRouter>
+       
     )
 }
 
