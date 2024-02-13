@@ -1,5 +1,6 @@
 import { lazy, Suspense } from 'react';
 import { useEffect } from 'react';
+import { HashRouter } from 'react-router-dom';
 import { BrowserRouter as Router, Route, Routes, Navigate} from "react-router-dom"
 import AppHeader from "../components/appHeader/AppHeader";
 // import { MainPage, ComicsPage, SingleComicPage } from "../pages";
@@ -80,6 +81,7 @@ const App = () => {
             <div className="app">
                 <AppHeader />
                 <main>
+                <HashRouter basename="/portfolio">
                     <Suspense fallback={<Spinner/>}>
                         <Routes>
                             {/* <Route index element={<Navigate to="/portfolio" replace />} /> */}
@@ -95,6 +97,7 @@ const App = () => {
                             <Route path="*" element={<Page404 />} />
                         </Routes>
                     </Suspense>
+                    </HashRouter>
                 </main>
             </div>
         </Router>
