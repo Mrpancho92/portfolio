@@ -1,6 +1,6 @@
 import { lazy, Suspense } from 'react';
 import { useEffect } from 'react';
-import { HashRouter } from 'react-router-dom';
+import { BrowserRouter, HashRouter } from 'react-router-dom';
 import { BrowserRouter as Router, Route, Routes, Navigate} from "react-router-dom"
 import AppHeader from "../components/appHeader/AppHeader";
 // import { MainPage, ComicsPage, SingleComicPage } from "../pages";
@@ -78,7 +78,7 @@ const App = () => {
     // window.location.search = 'http://localhost:3000';
     return (
        
-        <HashRouter>
+        <BrowserRouter>
             <div className="app">
                 <AppHeader />
                 <main>
@@ -101,7 +101,7 @@ const App = () => {
                     </Suspense>
                 </main>
             </div>
-        </HashRouter>
+        </BrowserRouter>
        
     )
 }
