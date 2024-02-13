@@ -5,7 +5,9 @@ const IsMobileHomePage = () => {
         const overFlow = document.getElementById('burger-checkbox');
         const close = document.querySelector('.menu-list');
         const menu = document.querySelector('.menu');
+        const menuItem = document.querySelectorAll('.menu-item');
         const burger = document.querySelector('.burger');
+        // Закрытие-открытие бургер меню по нажатию на сам бургер
         overFlow.addEventListener('click', () => {
             if (overFlow.checked) {
                 document.body.style.overflow = "hidden";
@@ -28,11 +30,11 @@ const IsMobileHomePage = () => {
              } else {
                 document.body.style.overflow = "";
                 menu.style = ``;
-                close.style = `
-                `;
+                close.style = ``;
                 burger.style = ``;
              }
         })
+        // Закрытие бургер меню по нажатию на поле вне зоны бургер меню
        window.addEventListener('click', (e) => {
         if (e.target === menu && overFlow.checked === true ) {
             overFlow.checked = false;
@@ -41,6 +43,16 @@ const IsMobileHomePage = () => {
             close.style = ``;
             burger.style = ``;
         }
+       });
+         // Закрытие бургер меню по нажатию на навигационный элемент (ссылку страницу) 
+       Array.from(menuItem).forEach(item => {
+            item.addEventListener('click', () => {
+                overFlow.checked = false;
+                document.body.style.overflow = "";
+                menu.style = ``;
+                close.style = ``;
+                burger.style = ``;
+            });
        });
     }
   
