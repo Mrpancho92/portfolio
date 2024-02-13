@@ -78,7 +78,7 @@ const App = () => {
     // window.location.search = 'http://localhost:3000';
     return (
        
-        <BrowserRouter>
+        <HashRouter>
             <div className="app">
                 <AppHeader />
                 <main>
@@ -101,7 +101,7 @@ const App = () => {
                     </Suspense>
                 </main>
             </div>
-        </BrowserRouter>
+        </HashRouter>
        
     )
 }
