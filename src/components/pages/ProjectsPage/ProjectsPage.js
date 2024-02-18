@@ -30,7 +30,7 @@ const ProjectPage = () => {
     
     IsMobileHomePage();
   
-    console.log('render2');
+    console.log('render-PROJECTS');
     const {getdata, process, setProcess} =  useMrPanchoService();
     useEffect(() => {
         // 'https://projectdata-f0pl.onrender.com/cards'
@@ -111,12 +111,12 @@ const ProjectPage = () => {
                 <title>Pavel Portfolio</title>
             </Helmet>
             <div className="ProjectPage">
-            <div className="ProjectPage_bg">
-                <h1> My projects </h1>
-                <div className="ProjectPage_container">
-                   {renderCards()}
+                <div className="ProjectPage_bg">
+                    <h1> My projects </h1>
+                    <div className="ProjectPage_container">
+                    {renderCards()}
+                    </div>
                 </div>
-            </div>
             </div>
         </>
     )

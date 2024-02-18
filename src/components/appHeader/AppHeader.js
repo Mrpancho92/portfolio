@@ -25,7 +25,7 @@ const AppHeader = () => {
         localStorage.setItem('rememberMe', !counter);  
     }
     const dispatch = useDispatch();
-    console.log('render1');
+    console.log('render-AppHeader');
    
     return (
         <header className="app__header">

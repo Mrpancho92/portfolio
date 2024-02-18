@@ -1,8 +1,11 @@
 const initialState = {
     counters: {
-      firstCounter: JSON.parse(localStorage.getItem('rememberMe')) || false,
-      secondCounter: false,
-      rememberMe: false
+      firstCounter: JSON.parse(localStorage.getItem('rememberMe')) || false
+    },
+    aboutOption: {
+      tech: JSON.parse(localStorage.getItem('aboutMeOptions')) ? JSON.parse(localStorage.getItem('aboutMeOptions')).tech : true, 
+      exp: JSON.parse(localStorage.getItem('aboutMeOptions')) ? JSON.parse(localStorage.getItem('aboutMeOptions')).exp : false,
+      education: JSON.parse(localStorage.getItem('aboutMeOptions')) ? JSON.parse(localStorage.getItem('aboutMeOptions')).education : false
     }
   };
 const reducer = (state = initialState, action) => {
@@ -15,12 +18,34 @@ const reducer = (state = initialState, action) => {
                   firstCounter: !state.counters.firstCounter 
                 }
               };
-        case "toggle2":
+        case "clickTech":
             return {
                 ...state,
-                counters: {
-                  ...state.counters,
-                  secondCounter: !state.counters.secondCounter 
+                aboutOption: {
+                  ...state.aboutOption,
+                  tech: action.payload.tech,
+                  exp: action.payload.exp,
+                  education: action.payload.education
+                }
+              };
+        case "clickExp":
+            return {
+                ...state,
+                aboutOption: {
+                  ...state.aboutOption,
+                  tech: action.payload.tech,
+                  exp: action.payload.exp,
+                  education: action.payload.education
+                }
+              };
+        case "clickEducation":
+            return {
+                ...state,
+                aboutOption: {
+                  ...state.aboutOption,
+                  tech: action.payload.tech,
+                  exp: action.payload.exp,
+                  education: action.payload.education
                 }
               };
         case "rememberMe":
