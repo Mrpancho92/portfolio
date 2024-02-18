@@ -74,7 +74,7 @@ const AboutPage = () => {
                 console.log(it);
                 return it.map((item, index )=> {
                        return (
-                            <img key={index} src={item} style={{width: '50px', height: '50px' }} alt="logo"/>               
+                            <img key={index} src={item} alt="logo"/>               
                        ) 
                     }) 
                } 
@@ -99,7 +99,7 @@ const AboutPage = () => {
                return (
                <div key={index} className="AboutPage_wrap">
                    <div className="AboutPage_card">
-                   <div className="Card_imageContainer">
+                   <div className="AboutPage_imageContainer">
                        {/* <img src={photo(logo)} style={{width: '300px', height: '150px' }} alt="marvelLogo" /> */}
                        {/* <div className="Card_image" style={{backgroundImage: `url(${photo()})`}}></div> */}
                        {photo()}

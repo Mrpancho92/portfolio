@@ -1,5 +1,5 @@
-.AboutPage {
-  
+.AboutPage_container {
+    margin-top: 30px;
 }
 .AboutPage_bg {
     margin: 0 10%;
@@ -9,10 +9,22 @@
     display: flex;
     justify-content: space-between;
 }
-.AboutPage_container {
-   
+.AboutPage_wrap {
+    margin: 20px;
+}
+.AboutPage_card {
+    display: flex; 
+    flex-flow:row-reverse;
+    justify-content: space-between;
+    display: flex;
+    top: 20px;
+    background-color: rgb(225, 225, 225);
+    padding: 20px 0;
+    border-radius: 20px;
 }
 
-.Card_imageContainer {
-  
+.AboutPage_imageContainer {
+     position: relative;
+    width: 50%;
+    height: 100%;
 }
