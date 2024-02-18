@@ -142,8 +142,9 @@ const AboutPage = () => {
             </Helmet>
             <div className="AboutPage">
                 <div className="AboutPage_bg">
+                <h1> About me </h1>
                     <div className="AboutPage_text_buttons">
-                        <h1> About me </h1>
+                        
                         <button onClick={() => dispatch(clickTech())} 
                         className="d-flex justify-content-center btn btn-primary">My Tech Stack</button>
                         <button onClick={() => dispatch(clickExp())} className="d-flex justify-content-center btn btn-primary">My Experiance</button>

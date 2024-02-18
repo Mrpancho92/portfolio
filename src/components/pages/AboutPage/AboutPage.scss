@@ -28,3 +28,51 @@
     width: 50%;
     height: 100%;
 }
+
+.AboutPage_text_buttons {
+    margin-top: 30px;
+}
+
+@media (max-width:575px) { 
+    .AboutPage {
+        margin: 0;
+     }
+     .AboutPage_bg {
+        margin: 0;
+    }
+
+    .AboutPage_card {
+        display: flex;
+        flex-flow:column-reverse;
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .AboutPage_imageContainer {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: center;    
+    }
+  
+    .Card_technologyStack {
+        min-width: 130px;
+        font-size: 18px;
+    }
+
+    .Card_mainFeatures {
+        font-size: 18px;
+    }
+    
+    .Card_content_bg {
+       margin: 0 18px 0 18px;
+       gap: 18px;
+    }
+    .Card_imageContainer {
+        width: 91%;
+        height: 100%;   
+    }
+    .Card_image {
+        max-Width: 100%;
+    }
+}
