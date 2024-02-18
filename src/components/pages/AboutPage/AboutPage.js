@@ -116,6 +116,7 @@ const AboutPage = () => {
                                </div>
                                <div className="AboutPage_Card_mainFeatures">
                                    <p>{item.positionAtWork ? item.positionAtWork : null }</p>
+                                   <p>{item.positionEducation ? item.positionEducation : null }</p>
                                    <ul className="AboutPage_Card_list">
                                       {item.description ? ulDescription() : null}
                                    </ul>
