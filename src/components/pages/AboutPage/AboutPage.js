@@ -104,19 +104,19 @@ const AboutPage = () => {
                        {/* <div className="Card_image" style={{backgroundImage: `url(${photo()})`}}></div> */}
                        {photo()}
                    </div>
-                   <div className="Card_content_bg">
-                       <div className="Card_content">
-                           <h2 className="Card_projectName">{item.cardName}</h2>
-                           <div className="Card_listContainer">
-                               <div className="Card_technologyStack">
+                   <div className="AboutPage_Card_content_bg">
+                       <div className="AboutPage_Card_content">
+                           <h2 className="AboutPage_Card_projectName">{item.cardName}</h2>
+                           <div className="AboutPage_Card_listContainer">
+                               <div className="AboutPage_Card_technologyStack">
                                    {/* <p>Technology stack:</p> */}
-                                   <ul className="Card_list">
+                                   <ul className="AboutPage_Card_list">
                                        {item.myTechStack ? ulTechStack() : null}
                                    </ul>
                                </div>
-                               <div className="Card_mainFeatures">
+                               <div className="AboutPage_Card_mainFeatures">
                                    <p>{item.positionAtWork ? item.positionAtWork : null }</p>
-                                   <ul className="Card_list">
+                                   <ul className="AboutPage_Card_list">
                                       {item.description ? ulDescription() : null}
                                    </ul>
                                </div>
