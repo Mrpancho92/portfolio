@@ -33,6 +33,12 @@
     margin-top: 30px;
 }
 
+.AboutPage_Card_list li {
+    list-style-type: disc; 
+    font-size: 18px; 
+    margin-left: 20px;  
+}
+
 @media (max-width:575px) { 
     .AboutPage {
         margin: 0;
@@ -74,5 +80,8 @@
     }
     .AboutPage_Card_image {
         max-Width: 100%;
+    }
+    .AboutPage_Card_projectName {
+        font-size: 22px;
     }
 }
