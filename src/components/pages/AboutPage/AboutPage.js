@@ -71,7 +71,6 @@ const AboutPage = () => {
                         if (logo[0] === item) it.push(logo[1]);
                     })
                 });
-                console.log(it);
                 return it.map((item, index )=> {
                        return (
                             <img key={index} src={item} alt="logo"/>               
