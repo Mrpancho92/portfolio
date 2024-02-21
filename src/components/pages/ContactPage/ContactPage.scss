@@ -1,0 +1,37 @@
+.form {
+    margin-left: 20px;
+    display: flex;
+    background-color: #ededed;
+     width: 40%;
+     height: 300px;
+     justify-content: center;
+     align-items: center;
+     border-radius: 20px;
+}
+.form_contaiter {
+    width: 80%;
+}
+.iconsBar_iconsContainer {
+    margin-left: 20px;
+    margin-top: 1%;
+    width: 40%;
+}
+.form_submit {
+    margin-top: 10px;
+    
+}
+
+@media (max-width:575px) { 
+    .form {
+        margin: 5%;
+        width: 90%;
+    }
+    .form_contaiter {
+
+    }
+    .iconsBar_iconsContainer {
+        margin: 5%;
+        margin-top: 5%;
+        width: 90%;
+    }
+}

@@ -110,6 +110,26 @@ main {
     .AboutPage_Card_content_bg {
         color:#e7e5e5;
     }
+
+    
+    .form {
+        background-color: rgb(82, 82, 82);  
+    }
+    .form_email {
+        color:#e7e5e5;
+        background-color: #3e3d3d;
+        border-color: #3e3d3d;
+    }
+    .form_message {
+        color:#e7e5e5;
+        background-color: #3e3d3d;
+        border-color: #3e3d3d;
+    }
+    .form_submit {
+        color:#e7e5e5;
+        background-color: #3e3d3d;
+        border-color: #3e3d3d;
+    }
 }
 
 @keyframes pulse {
