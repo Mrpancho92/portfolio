@@ -31,11 +31,28 @@
     margin-top: 3%;
     width: 50%
 }
+@-webkit-keyframes animations {
+    0% {
+        -webkit-background-color: inherit;
+    }
+    34% {
+        -webkit-background-color: #a9a9a9;
+    }
+    67% {
+        -webkit-background-color: #a9a9a9;
+    }
+    100% {
+        -webkit-background-color: inherit;
+    }
+}
 @keyframes animations {
     0% {
         background-color: inherit;
     }
-    50% {
+    34% {
+        background-color: #a9a9a9;
+    }
+    67% {
         background-color: #a9a9a9;
     }
     100% {
@@ -52,9 +69,10 @@
 }
 
 .form_submit:focus {
+    -webkit-animation: animations 0.5s linear infinite; 
     animation: animations 0.5s linear infinite; 
     border-color: #a9a9a9;
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 2px 2px 8px rgba(0, 0, 0, 0.6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 2px 2px 8px rgba(69, 41, 41, 0.6);
     outline: 0 none;
   }
 
