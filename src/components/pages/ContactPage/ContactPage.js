@@ -24,57 +24,49 @@ const ContactPage = () => {
     //     })
     //     })
    
-    
     useEffect(() => {
         setClickForm(document.querySelectorAll(".form_submit")[0]); 
     },[])
     
-    
-      
-      
-       
-    
- 
-
    const send = (e) => {
     e.preventDefault();
-    // clickForm.blur();
-    setTimeout(() => {
-        clickForm.blur();
-    },400)
+    // setTimeout(() => {
+    //     clickForm.blur();
+    // },400)
      
     // const templateParams = {
     //     from_name: form.current[0].value,
     //     message: form.current[1].value,
     //   };
-    // const serviceID = 'service_qjtpa1i';
-    // const templateID = 'template_dn8astt';
-    // const options = {
-    //     publicKey: 'zGqZVWGaVG3aLfQap',
-    //     // Do not allow headless browsers
-    //     blockHeadless: true,
-    //     blockList: {
-    //       // Block the suspended emails
-    //       list: ['foo@emailjs.com', 'bar@emailjs.com'],
-    //       // The variable contains the email address
-    //       watchVariable: 'userEmail',
-    //     },
-    //     limitRate: {
-    //       // Set the limit rate for the application
-    //       id: 'app',
-    //       // Allow 1 request per 10s
-    //       throttle: 10000,
-    //     },
-    //   };
+    const serviceID = 'service_qjtpa1i';
+    const templateID = 'template_dn8astt';
+    const options = {
+        publicKey: 'zGqZVWGaVG3aLfQap',
+        // Do not allow headless browsers
+        blockHeadless: true,
+        blockList: {
+          // Block the suspended emails
+          list: ['foo@emailjs.com', 'bar@emailjs.com'],
+          // The variable contains the email address
+          watchVariable: 'userEmail',
+        },
+        limitRate: {
+          // Set the limit rate for the application
+          id: 'app',
+          // Allow 1 request per 10s
+          throttle: 10000,
+        },
+      };
 
-    // emailjs.sendForm(serviceID, templateID, form.current, options ).then(
-    //     (response) => {
-    //       console.log('SUCCESS!', response.status, response.text);
-    //     },
-    //     (error) => {
-    //       console.log('FAILED...', error.text);
-    //     },
-    //   );
+    emailjs.sendForm(serviceID, templateID, form.current, options ).then(
+        (response) => {
+          console.log('SUCCESS!', response.status, response.text);
+          clickForm.blur();
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
    }
 //   **********
 //  console.log(form.current? form.current[0].value : '');
