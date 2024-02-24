@@ -111,19 +111,33 @@ main {
         color:#e7e5e5;
     }
 
+
     
+    .ContactPage_bg h1, h2 , p {
+        color:#e7e5e5;
+    }
     .form {
         background-color: rgb(82, 82, 82);  
+    }
+    .form_emailText {
+        color:#e7e5e5;
     }
     .form_email {
         color:#e7e5e5;
         background-color: #3e3d3d;
         border-color: #3e3d3d;
+        &::placeholder {
+            color: #e7e5e5;
+            opacity: 0.8;
+        }
     }
     .form_message {
         color:#e7e5e5;
         background-color: #3e3d3d;
         border-color: #3e3d3d;
+    }
+    .form_textareaText {
+        color:#e7e5e5;
     }
     .form_submit {
         color:#e7e5e5;

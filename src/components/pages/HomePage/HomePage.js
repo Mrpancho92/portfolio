@@ -1,20 +1,16 @@
 // import { connect } from "react-redux";
-import { shallowEqual, useSelector } from "react-redux";
-import { useMediaQuery } from 'react-responsive';
-import { useEffect, useState } from 'react';
+import { useSelector } from "react-redux";
 import {Link} from 'react-router-dom';
 import { Helmet } from "react-helmet";
 import './HomePage.scss';
 import '../../../style/style.scss';
 import IconsBar from "../../iconsBar/IconsBar";
 import avatar from '../../../resources/avatar.jpg';
-import { bool } from "prop-types";
-import IsMobileHomePage from "../../isMobile/isMobileHomePage";
+import IsMobilePage from "../../isMobile/isMobilePage";
 
 const HomePage = () => {
-    const [state, setState] = useState(false);
     const counter = useSelector(state => state.counters.firstCounter);
-    IsMobileHomePage();
+    IsMobilePage();
    
     // const localSave = () => {
     //     localStorage.setItem('url', window.location.pathname);  

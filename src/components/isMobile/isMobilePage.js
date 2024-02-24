@@ -1,5 +1,5 @@
 import { useMediaQuery } from 'react-responsive';
-const IsMobileHomePage = () => {
+const IsMobilePage = () => {
     const isMobile = useMediaQuery({ query: `(max-width: 575px)` });
     if (isMobile) {
         const overFlow = document.getElementById('burger-checkbox');
@@ -59,4 +59,4 @@ const IsMobileHomePage = () => {
 
    
 }
-export default IsMobileHomePage;
+export default IsMobilePage;

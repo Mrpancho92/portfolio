@@ -1,14 +1,12 @@
 // import {Link, NavLink} from 'react-router-dom';
-import { React, useState } from 'react';
+import { React } from 'react';
 import { useMediaQuery } from 'react-responsive';
-import { useEffect } from 'react';
-import { connect, shallowEqual } from "react-redux";
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import Switch from '../switch/Switch';
 import BurgerMenu from '../burgerMenu/burgerMenu';
 import './appHeader.scss';
 import '../../style/style.scss'
-import { toggle, toggle2, remember } from '../../actions';
+import { toggle } from '../../actions';
 import { useSelector, useDispatch } from 'react-redux';
 
 const AppHeader = () => {

@@ -1,11 +1,11 @@
 import ErrorMessage from "../errorMessage/ErrorMessage";
 import {Link} from 'react-router-dom';
 import { Helmet } from "react-helmet";
-import IsMobileHomePage from "../isMobile/isMobileHomePage";
+import IsMobilePage from "../isMobile/isMobilePage";
 
 
 const Page404 = () => {
-    IsMobileHomePage();
+    IsMobilePage();
     return (
         <div>
             <Helmet>

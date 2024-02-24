@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo} from "react";
+import { useState, useEffect} from "react";
 import { Helmet } from "react-helmet";
 import '../../../style/style.scss';
 import './projectsPage.scss';
@@ -7,7 +7,7 @@ import useMrPanchoService from "../../../services/MrPanchoService";
 import * as resources from '../../../resources';
 import Spinner from "../../spinner/Spinner";
 import ErrorMessage from "../../errorMessage/ErrorMessage";
-import IsMobileHomePage from "../../isMobile/isMobileHomePage";
+import IsMobilePage from "../../isMobile/isMobilePage";
 
 // {bringitup, marvelLogo, mogo, nativeJs}
 // const setContent = (process, Component, newItemLoading) => {
@@ -28,7 +28,7 @@ import IsMobileHomePage from "../../isMobile/isMobileHomePage";
 const ProjectPage = () => {
     const [data, setData] = useState([]);
     
-    IsMobileHomePage();
+    IsMobilePage();
   
     console.log('render-PROJECTS');
     const {getdata, process, setProcess} =  useMrPanchoService();

@@ -1,7 +1,15 @@
+import { useEffect } from 'react';
 import './iconsBar.scss';
 import { Envelope, Github, Telegram, Whatsapp } from 'react-bootstrap-icons';
 
 const IconsBar = ({onChange}) => {
+    useEffect(() => {
+        let element = document.querySelector('.homePage_text');
+        if (element) {
+          const r =  document.querySelector('.iconsBar_iconsContainer');
+                r.style = `width: 90%;`
+        } 
+    }, [])
     return (
         <div className="iconsBar_iconsContainer">
             <a href="mailto:mrpancho@mail.ru">
