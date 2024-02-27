@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
 import '../../../style/style.scss';
 import './AboutPage.scss';
+import ProjectData from '../../../Assets/projectData/projectData';
 import * as resources from '../../../resources';
 import useMrPanchoService from "../../../services/MrPanchoService";
 import IsMobilePage from "../../isMobile/isMobilePage";
@@ -23,52 +24,85 @@ const AboutPage = () => {
     const dispatch = useDispatch();
     const {getdata, process, setProcess} =  useMrPanchoService();
 
-    useEffect(() => {
-        // 'https://projectdata-f0pl.onrender.com/cards'
-        // 'http://localhost:3000/cards'
-        // 'https://projectdata-f0pl.onrender.com/aboutMeCardsTechStack'
+    // useEffect(() => {
+    //     // 'https://projectdata-f0pl.onrender.com/cards'
+    //     // 'http://localhost:3000/cards'
+    //     // 'https://projectdata-f0pl.onrender.com/aboutMeCardsTechStack'
+    //     if (tech + '' === 'true') {
+    //         getdata('https://projectdata-f0pl.onrender.com/aboutMeCardsTechStack')
+    //         .then(onLoadedTechStack)
+    //         .then(() => setProcess('confirmed'))
+    //     } 
+    // },[tech]) 
+
+    // useEffect(() => {
+    //     // 'https://projectdata-f0pl.onrender.com/aboutMeCardsMyExperience'
+    //     if (exp + '' === 'true') {
+    //         getdata('https://projectdata-f0pl.onrender.com/aboutMeCardsMyExperience')
+    //         .then(onLoadedMyExperience)
+    //         .then(() => setProcess('confirmed'))
+    //     } 
+    // },[exp])
+
+    // useEffect(() => {
+    //     // 'https://projectdata-f0pl.onrender.com/aboutMeCardsMyEducation'
+    //     if (education + '' === 'true') {
+    //         getdata('https://projectdata-f0pl.onrender.com/aboutMeCardsMyEducation')
+    //         .then(onLoadedMyEducation)
+    //         .then(() => setProcess('confirmed'))
+    //     } 
+    // },[education])
+
+    // const onLoadedTechStack = (list) => {
+    //     setData(list);  
+    // }
+    // const onLoadedMyExperience = (list) => {
+    //     setData(list);  
+    // }
+    // const onLoadedMyEducation = (list) => {
+    //     setData(list);  
+    // }
+
+ useEffect(() => {
         if (tech + '' === 'true') {
-            getdata('https://projectdata-f0pl.onrender.com/aboutMeCardsTechStack')
-            .then(onLoadedTechStack)
-            .then(() => setProcess('confirmed'))
+            const filterProjectData = ProjectData.filter(item => {
+                if(item.aboutMeCardsTechStack) {
+                  return item
+                } else return false
+             })
+             setData(Object.values(filterProjectData)[0].aboutMeCardsTechStack);
         } 
     },[tech]) 
 
     useEffect(() => {
-        // 'https://projectdata-f0pl.onrender.com/aboutMeCardsMyExperience'
         if (exp + '' === 'true') {
-            getdata('https://projectdata-f0pl.onrender.com/aboutMeCardsMyExperience')
-            .then(onLoadedMyExperience)
-            .then(() => setProcess('confirmed'))
+            const filterProjectData = ProjectData.filter(item => {
+                if(item.aboutMeCardsMyExperience) {
+                  return item
+                } else return false
+             })
+             setData(Object.values(filterProjectData)[0].aboutMeCardsMyExperience);
         } 
-    },[exp])
+    },[exp]) 
 
     useEffect(() => {
-        // 'https://projectdata-f0pl.onrender.com/aboutMeCardsMyEducation'
         if (education + '' === 'true') {
-            getdata('https://projectdata-f0pl.onrender.com/aboutMeCardsMyEducation')
-            .then(onLoadedMyEducation)
-            .then(() => setProcess('confirmed'))
+            const filterProjectData = ProjectData.filter(item => {
+                if(item.aboutMeCardsMyEducation) {
+                  return item
+                } else return false
+             })
+             setData(Object.values(filterProjectData)[0].aboutMeCardsMyEducation);
         } 
-    },[education])
-
-    const onLoadedTechStack = (list) => {
-        setData(list);  
-    }
-    const onLoadedMyExperience = (list) => {
-        setData(list);  
-    }
-    const onLoadedMyEducation = (list) => {
-        setData(list);  
-    }
+    },[education]) 
 
     function renderCards() {
-        const rez = data.map((item, index) => {
+        const rez = data.map((item, index) => {       
            function photo() {
                let it = [];
                Object.entries(resources).forEach(logo => {
                     item.img.forEach(item => {
-                        if (logo[0] === item) it.push(logo[1]);
+                        if (logo[0] === item) it.push(logo[1])                
                     })
                 });
                 return it.map((item, index )=> {
@@ -94,7 +128,7 @@ const AboutPage = () => {
                      })
                 return uldescription;
                }
-
+            
                return (
                <div key={index} className="AboutPage_wrap">
                    <div className="AboutPage_card">
@@ -126,10 +160,12 @@ const AboutPage = () => {
                </div>
            </div>
                ) 
+        
            });
         return (
             rez
-               )  
+               ) 
+        
     }
     return (
         <>

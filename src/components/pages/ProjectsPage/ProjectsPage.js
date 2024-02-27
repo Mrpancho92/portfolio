@@ -2,6 +2,7 @@ import { useState, useEffect} from "react";
 import { Helmet } from "react-helmet";
 import '../../../style/style.scss';
 import './projectsPage.scss';
+import ProjectData from '../../../Assets/projectData/projectData';
 import {Link} from 'react-router-dom'
 import useMrPanchoService from "../../../services/MrPanchoService";
 import * as resources from '../../../resources';
@@ -35,15 +36,15 @@ const ProjectPage = () => {
     useEffect(() => {
         // 'https://projectdata-f0pl.onrender.com/cards'
         // 'http://localhost:3000/cards'
-        getdata('https://projectdata-f0pl.onrender.com/cards').then(onLoaded).then(() => setProcess('confirmed'))
+        // getdata('../../../Assets/db.json').then(onLoaded).then(() => setProcess('confirmed'))
+
     }, [])
+    // const onLoaded = (list) => {
+    //     setData(list);  
+    // }
    
-    const onLoaded = (list) => {
-        setData(list);  
-    }
-    
     function renderCards() {
-     const rez = data.map((item, index) => {
+     const rez = ProjectData[0].cards.map((item, index) => {
         function photo() {
             let it;
             Object.entries(resources).forEach(logo => {
