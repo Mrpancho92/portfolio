@@ -192,9 +192,9 @@ const AboutPage = () => {
                     <div className="AboutPage_text_buttons">
                         
                         <button onClick={() => dispatch(clickTech())} 
-                        className="d-flex justify-content-center btn btn-primary">My Tech Stack</button>
-                        <button onClick={() => dispatch(clickExp())} className="d-flex justify-content-center btn btn-primary">My Experiance</button>
-                        <button onClick={() => dispatch(clickEducation())} className="d-flex justify-content-center btn btn-primary">My Education</button>
+                        className="d-flex justify-content-center btn btn-primary aboutPageBtn">My Tech Stack</button>
+                        <button onClick={() => dispatch(clickExp())} className="d-flex justify-content-center btn btn-primary aboutPageBtn">My Experiance</button>
+                        <button onClick={() => dispatch(clickEducation())} className="d-flex justify-content-center btn btn-primary aboutPageBtn">My Education</button>
                     </div>
                     <div className="AboutPage_container">
                     {renderCards()}
