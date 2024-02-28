@@ -39,13 +39,13 @@ const ProjectData = [
     "aboutMeCardsTechStack": [
         {
             "cardName": "Frameworks:",
-            "img": ["react", "redux"],
+            "img": ["react", "redux", "router"],
             "myTechStack": ["React", "React-Redux + toolkit", "React Router", "Styled Components"]
         },
         {
             "cardName": "Programming/Markup languages:",
-            "img": ["HTML", "CSS", "Vanilla Javascript", "SASS"],
-            "myTechStack": ["HTML", "CSS", "Vanilla Javascript", "SASS"]
+            "img": ["HTML", "CSS", "JS", "SASS", "TS"],
+            "myTechStack": ["HTML", "CSS", "Vanilla Javascript","Typescript", "SASS"]
         }
     ]
 },
@@ -149,9 +149,9 @@ const ProjectData = [
         {
             "cardName": "Личные качества",
             "img": ["personalQualities"],
-            "positionEducation": "Степень бакалавра",
+            "positionEducation": "",
             "description": [
-                "Ответственность, целеустремленность, быстрая обучаемость, аккуратность, высокая работоспособность,дисциплинированность, пунктуальность, стремление к самосовершенствованию",
+                "Ответственность, целеустремленность, быстрая обучаемость, аккуратность, высокая работоспособность, дисциплинированность, пунктуальность, стремление к самосовершенствованию",
                 "Веду здоровый образ жизни",
                 "Занял 2 место на олимпиаде по математике МЭИ, 2010г",
                 "Имею водительские права категории А,В",

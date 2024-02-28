@@ -71,6 +71,7 @@ const AboutPage = () => {
                 } else return false
              })
              setData(Object.values(filterProjectData)[0].aboutMeCardsTechStack);
+             
         } 
     },[tech]) 
 
@@ -100,14 +101,23 @@ const AboutPage = () => {
         const rez = data.map((item, index) => {       
            function photo() {
                let it = [];
+               let styleImg = '';
                Object.entries(resources).forEach(logo => {
+                if (item.cardName === "Frameworks:") {
+                    styleImg = `styleImg`;
+                } else {
+                    styleImg = `otherImg`;
+                } 
                     item.img.forEach(item => {
                         if (logo[0] === item) it.push(logo[1])                
                     })
                 });
                 return it.map((item, index )=> {
+                    console.log(item);
                        return (
-                            <img key={index} src={item} alt="logo"/>               
+                        <div key={index} className={styleImg}>
+                            <img src={item} alt="logo"/> 
+                        </div>                
                        ) 
                     }) 
                } 
