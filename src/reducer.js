@@ -6,6 +6,9 @@ const initialState = {
       tech: JSON.parse(localStorage.getItem('aboutMeOptions')) ? JSON.parse(localStorage.getItem('aboutMeOptions')).tech : true, 
       exp: JSON.parse(localStorage.getItem('aboutMeOptions')) ? JSON.parse(localStorage.getItem('aboutMeOptions')).exp : false,
       education: JSON.parse(localStorage.getItem('aboutMeOptions')) ? JSON.parse(localStorage.getItem('aboutMeOptions')).education : false
+    },
+    process: {
+        sendprocess: 'waiting'
     }
   };
 const reducer = (state = initialState, action) => {
@@ -48,12 +51,12 @@ const reducer = (state = initialState, action) => {
                   education: action.payload.education
                 }
               };
-        case "rememberMe":
+        case "process":
             return {
                 ...state,
-                counters: {
-                  ...state.counters,
-                  rememberMe: !state.counters.rememberMe
+                process: {
+                  ...state.process,
+                  sendprocess: action.payload.sendprocess
                 }
               };
         default :

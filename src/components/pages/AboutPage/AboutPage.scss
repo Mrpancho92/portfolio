@@ -29,7 +29,9 @@
     width: 50%;
     height: 100%;
     margin: auto 0;
+   
 }
+
 .AboutPage_imageContainer img  {
     border-radius: 20px;
     width: 50%;
@@ -67,6 +69,13 @@
     width: 100%;
     height: 100%; 
     margin: auto 0;
+    text-align: center;
+}
+.styleImg img {
+    // position: relative;
+    width: 32%;
+    height: 32%; 
+    margin: auto 0;
 }
 .otherImg {
     display: flex;
@@ -74,7 +83,9 @@
     height: 100%; 
     margin: 0 auto;
 }
-
+.AboutPage_Card_content_bg {
+    margin-left: 5%;
+}
 @media (max-width:575px) { 
     .AboutPage {
         margin: 0;
@@ -104,7 +115,7 @@
         height: 100%; 
        text-align: center;
     }
-  
+
     .AboutPage_Card_technologyStack {
         min-width: 130px;
         font-size: 18px;
