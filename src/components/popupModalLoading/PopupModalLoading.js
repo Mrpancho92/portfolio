@@ -4,7 +4,9 @@ import './popupModalLoading.scss';
 const PopupModalLoading = () => {
     return (
         <div className="popupModalLoading">
-            Отправка прошла успешно!
+           <p>Отправка прошла успешно!
+            <span className="ec ec-slightly-smiling-face"></span>
+            </p> 
         </div>
     )
 }

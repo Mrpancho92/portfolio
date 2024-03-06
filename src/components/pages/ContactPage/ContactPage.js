@@ -19,11 +19,13 @@ const setContent = (process, Component) => {
         case 'loading':
             return (
                 <div className="popupModalLoading">
-                    <Spinner/>
+                    <div className="positionSpinner">
+                        <Spinner/>
+                    </div>
                 </div>
             )
         case 'confirmed':
-            return <Component/>;
+            return <Component/>;  
         case 'error':
             return <ErrorMessage/>;
         default:
