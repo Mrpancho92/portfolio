@@ -1,14 +1,13 @@
-import {useEffect, useMemo, useState } from "react";
+import {useMemo} from "react";
 import ContactForm from "../../contactForm/contactForm";
-import { useSelector, useDispatch } from "react-redux";
-import { processSenEmail } from '../../../actions';
+import { useSelector } from "react-redux";
 import { Helmet } from "react-helmet";
 import '../../../style/style.scss';
 import PopupModalLoading from "../../popupModalLoading/PopupModalLoading";
 import IconsBar from "../../iconsBar/IconsBar";
 import './ContactPage.scss';
 import IsMobilePage from "../../isMobile/isMobilePage";
-import ErrorMessage from "../../errorMessage/ErrorMessage";
+import ErrorMessageContactForm from "../../errorMessageContactForm/errorMessageContactForm";
 import Spinner from "../../spinner/Spinner";
 
 
@@ -27,7 +26,7 @@ const setContent = (process, Component) => {
         case 'confirmed':
             return <Component/>;  
         case 'error':
-            return <ErrorMessage/>;
+            return <ErrorMessageContactForm/>;
         default:
             throw new Error('Unexpected process state');
     }
@@ -36,7 +35,6 @@ const setContent = (process, Component) => {
 const ContactPage = () => {
     const counter = useSelector(state => state.counters.firstCounter);
     const process = useSelector(state => state.process.sendprocess);
-    const dispatch = useDispatch();
     
     IsMobilePage();
     console.log('render-CONTACTME');
@@ -45,13 +43,6 @@ let elements = useMemo(() => {
         return setContent(process, PopupModalLoading); 
 }, [process]);
 console.log(process);
-// useEffect(() => {
-//     if (process === 'confirmed') {
-//         setTimeout(() => {
-//           dispatch(processSenEmail('waiting'));
-//       },2000)
-//       }
-// })
 
     return (
         <>

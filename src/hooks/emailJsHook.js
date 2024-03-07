@@ -4,19 +4,12 @@ import emailjs from '@emailjs/browser';
 
 export const useEmailJs = () => {
     const [process, setProcess] = useState('waiting');
-
     const send = async(e , form, clickForm) => {
         e.preventDefault();
         setProcess('loading');
-        // setTimeout(() => {
-        //     clickForm.blur();
-        // },400)
-         console.log('dddddd');
-        // const templateParams = {
-        //     from_name: form.current[0].value,
-        //     message: form.current[1].value,
-        //   };
-        const serviceID = 'service_qjtpa1i';
+
+        // Данные для работы с emailjs
+        const serviceID = 'service_qjtpa1i1111';
         const templateID = 'template_dn8astt';
         const options = {
             publicKey: 'zGqZVWGaVG3aLfQap',
@@ -35,22 +28,57 @@ export const useEmailJs = () => {
               throttle: 10000,
             },
           };
-      
+        // Валидация формы отправки данных
+        const email = form.current[0].value
+        const textLabelEmail = form.current.querySelectorAll('.form-label');
+        const message = form.current[1].value
+       if (!(email.includes('@') && email.includes('.') && !email.includes(' '))) {
+        form.current[0].style.border = '1px solid red';
+        textLabelEmail[0].style.color = 'red';
+        textLabelEmail[0].textContent = 'Email address (Заполните поле ввода!)';
+        form.current[0].focus();
+        setProcess('waiting')
+       }
+       if (!message.length > 0) {
+        form.current[1].style.border = '1px solid red';
+        textLabelEmail[1].style.color = 'red';
+        textLabelEmail[1].textContent = 'Your message... (Заполните поле ввода!)';
+        form.current[1].focus();
+        setProcess('waiting')
+       } 
+       if (email.includes('@') && email.includes('.') && !email.includes(' ')) {
+        textLabelEmail[0].textContent = 'Email address';
+        textLabelEmail[0].style.color = 'inherit';
+        form.current[0].style.border = 'none';
+       }
+       if (message.length > 0) {
+        textLabelEmail[1].textContent = 'Your message...';
+        textLabelEmail[1].style.color = 'inherit';
+        form.current[1].style.border = 'none';
+       }
+
+       if (email.includes('@') && email.includes('.') && !email.includes(' ') && message.length > 0) {
+        form.current[1].style.border = 'none';
+       // Отправка данных через emailjs
       await  emailjs.sendForm(serviceID, templateID, form.current, options ).then(
             (response) => {
               console.log('SUCCESS!', response.status, response.text);
               setProcess('confirmed');
               clickForm.blur();
+              form.current.reset();
             },
             (error) => {
               console.log('FAILED...', error.text);
               setProcess('error');
+              form.current.reset();
             },
           );
-       }
+       } 
+    }
     const clearError = useCallback(() => {
         setProcess('waiting');
     }, []);
+
        return { send, process, setProcess, clearError}
 }
 
