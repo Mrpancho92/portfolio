@@ -9,6 +9,9 @@ import * as resources from '../../../resources';
 import Spinner from "../../spinner/Spinner";
 import ErrorMessage from "../../errorMessage/ErrorMessage";
 import IsMobilePage from "../../isMobile/isMobilePage";
+import {defaultSlide} from "../../../FramerMotion/framerMotion.pages.configs"
+import { motion } from 'framer-motion';
+
 
 // {bringitup, marvelLogo, mogo, nativeJs}
 // const setContent = (process, Component, newItemLoading) => {
@@ -103,7 +106,14 @@ const ProjectPage = () => {
     }
 
     return (
-        <>
+        
+        <motion.div
+            variants={defaultSlide}
+            initial='hidden'
+            animate='visible'
+            exit='exit'
+            className='ProjectPage'
+        >
             <Helmet>
                 <meta
                     name="description"
@@ -119,7 +129,7 @@ const ProjectPage = () => {
                     </div>
                 </div>
             </div>
-        </>
+        </motion.div>
     )
 }
 export default ProjectPage;

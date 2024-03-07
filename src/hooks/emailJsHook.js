@@ -33,15 +33,15 @@ export const useEmailJs = () => {
         const textLabelEmail = form.current.querySelectorAll('.form-label');
         const message = form.current[1].value
        if (!(email.includes('@') && email.includes('.') && !email.includes(' '))) {
-        form.current[0].style.border = '1px solid red';
-        textLabelEmail[0].style.color = 'red';
-        textLabelEmail[0].textContent = 'Email address (Заполните поле ввода!)';
+        form.current[0].style.border = '1px solid rgba(255, 51, 51, 0.94)';
+        textLabelEmail[0].style.color = 'rgba(255, 51, 51, 0.94)';
+        textLabelEmail[0].textContent = 'Email address (Неправильный адрес!)';
         form.current[0].focus();
         setProcess('waiting')
        }
        if (!message.length > 0) {
-        form.current[1].style.border = '1px solid red';
-        textLabelEmail[1].style.color = 'red';
+        form.current[1].style.border = '1px solid rgba(255, 51, 51, 0.94)';
+        textLabelEmail[1].style.color = 'rgba(255, 51, 51, 0.94)';
         textLabelEmail[1].textContent = 'Your message... (Заполните поле ввода!)';
         form.current[1].focus();
         setProcess('waiting')

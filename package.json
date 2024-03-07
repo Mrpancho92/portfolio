@@ -13,6 +13,7 @@
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
     "formik": "^2.4.5",
+    "framer-motion": "^11.0.8",
     "glob": "^10.3.10",
     "list-react-files": "^0.2.0",
     "prop-types": "^15.8.1",

@@ -7,7 +7,9 @@ import * as resources from '../../../resources';
 import useMrPanchoService from "../../../services/MrPanchoService";
 import IsMobilePage from "../../isMobile/isMobilePage";
 import { clickTech, clickExp, clickEducation } from '../../../actions';
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux';
+import {defaultSlide} from "../../../FramerMotion/framerMotion.pages.configs"
+import { AnimatePresence, motion } from 'framer-motion';
 
 const AboutPage = () => {
     IsMobilePage();
@@ -113,7 +115,6 @@ const AboutPage = () => {
                     })
                 });
                 return it.map((item, index )=> {
-                    console.log(item);
                        return (
                         <div key={index} className={styleImg}>
                             <img src={item} alt="logo"/> 
@@ -172,13 +173,17 @@ const AboutPage = () => {
                ) 
         
            });
-        return (
-            rez
-               ) 
+        return ( rez ) 
         
     }
     return (
-        <>
+        <motion.div
+            variants={defaultSlide}
+            initial='hidden'
+            animate='visible'
+            exit='exit'
+            className='AboutPage'
+        >
             <Helmet>
                 <meta
                     name="description"
@@ -190,18 +195,62 @@ const AboutPage = () => {
                 <div className="AboutPage_bg">
                 <h1> About me </h1>
                     <div className="AboutPage_text_buttons">
-                        
                         <button onClick={() => dispatch(clickTech())} 
                         className="d-flex justify-content-center btn btn-primary aboutPageBtn">My Tech Stack</button>
                         <button onClick={() => dispatch(clickExp())} className="d-flex justify-content-center btn btn-primary aboutPageBtn">My Experiance</button>
                         <button onClick={() => dispatch(clickEducation())} className="d-flex justify-content-center btn btn-primary aboutPageBtn">My Education</button>
                     </div>
-                    <div className="AboutPage_container">
-                    {renderCards()}
-                    </div>
+                    <AnimatePresence> {
+                       tech && (
+                            <motion.div
+                            variants={defaultSlide}
+                            initial='hidden'
+                            animate='visible'
+                            
+                            className='AboutPage_container'
+                        >
+                                    <div className="AboutPage_container">
+                                    {renderCards()}
+                                    </div>
+                            </motion.div>
+                        )
+                    }
+                    </AnimatePresence>
+                    <AnimatePresence> {
+                       exp && (
+                            <motion.div
+                            variants={defaultSlide}
+                            initial='hidden'
+                            animate='visible'
+                           
+                            className='AboutPage_container'
+                        >
+                                    <div className="AboutPage_container">
+                                    {renderCards()}
+                                    </div>
+                            </motion.div>
+                        )
+                    }
+                    </AnimatePresence>
+                    <AnimatePresence> {
+                       education && (
+                            <motion.div
+                            variants={defaultSlide}
+                            initial='hidden'
+                            animate='visible'
+                            
+                            className='AboutPage_container'
+                        >
+                                    <div className="AboutPage_container">
+                                    {renderCards()}
+                                    </div>
+                            </motion.div>
+                        )
+                    }
+                    </AnimatePresence>
                 </div>
             </div>
-        </>
+        </motion.div>
     )
 }
 export default AboutPage;

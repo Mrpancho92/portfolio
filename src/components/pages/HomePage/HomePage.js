@@ -7,6 +7,8 @@ import '../../../style/style.scss';
 import IconsBar from "../../iconsBar/IconsBar";
 import avatar from '../../../resources/avatar.jpg';
 import IsMobilePage from "../../isMobile/isMobilePage";
+import {defaultSlide} from "../../../FramerMotion/framerMotion.pages.configs"
+import { motion } from 'framer-motion';
 
 const HomePage = () => {
     const counter = useSelector(state => state.counters.firstCounter);
@@ -27,7 +29,13 @@ const HomePage = () => {
  
     
     return (
-        <>
+        <motion.div
+            variants={defaultSlide}
+            initial='hidden'
+            animate='visible'
+            exit='exit'
+            className='homePage_bg'
+        >
             <Helmet>
                 <meta
                     name="description"
@@ -67,7 +75,7 @@ const HomePage = () => {
                     </div>
                 </div>
             </div>
-        </>
+        </motion.div>
     )
 }
 // }className="homePage_projectsBtn" href="/projects"

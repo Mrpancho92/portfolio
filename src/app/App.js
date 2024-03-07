@@ -2,7 +2,6 @@ import { lazy, Suspense } from 'react';
 import { HashRouter } from 'react-router-dom';
 import { Route, Routes} from "react-router-dom"
 import AppHeader from "../components/appHeader/AppHeader";
-// import { MainPage, ComicsPage, SingleComicPage } from "../pages";
 import Spinner from '../components/spinner/Spinner';
 
 const Page404 = lazy(() => import('../components/pages/404'));   // Динамический импорт должен быть после статических

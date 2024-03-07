@@ -9,6 +9,8 @@ import './ContactPage.scss';
 import IsMobilePage from "../../isMobile/isMobilePage";
 import ErrorMessageContactForm from "../../errorMessageContactForm/errorMessageContactForm";
 import Spinner from "../../spinner/Spinner";
+import {defaultSlide} from "../../../FramerMotion/framerMotion.pages.configs"
+import { motion } from 'framer-motion';
 
 
 const setContent = (process, Component) => {
@@ -45,7 +47,13 @@ let elements = useMemo(() => {
 console.log(process);
 
     return (
-        <>
+        <motion.div
+            variants={defaultSlide}
+            initial='hidden'
+            animate='visible'
+            exit='exit'
+            className='ContactPage'
+        >
             <Helmet>
                 <meta
                     name="description"
@@ -68,7 +76,7 @@ console.log(process);
            </div>
         </div>
         {elements}
-        </>
+    </motion.div>
     )
 }
 export default ContactPage;

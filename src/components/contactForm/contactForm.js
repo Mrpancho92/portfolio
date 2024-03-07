@@ -6,14 +6,10 @@ import {useDispatch, useSelector} from 'react-redux';
 const ContactForm = () => {
     const { send, process, setProcess, clearError} = useEmailJs();
     const processs = useSelector(state => state.process.sendprocess);
-    const [email, setEmail] = useState();
-    const [message, setMessage] = useState();
     const form = useRef();
     const [clickForm, setClickForm] = useState();
-    // const [clearForm, setClearForm] = useState();
     const dispatch = useDispatch();
     
-    // setClearForm(document.getElementsByName('contact-form')[0]);
     useEffect(() => {
         setClickForm(document.querySelectorAll(".form_submit")[0]); 
     },[])
