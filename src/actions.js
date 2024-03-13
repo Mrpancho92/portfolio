@@ -3,6 +3,7 @@ export const clickTech = () => ({type: 'clickTech', payload: {"tech": true, "exp
 export const clickExp = () => ({type: 'clickExp', payload: {"tech": false, "exp": true, "education": false}});
 export const clickEducation = () => ({type: 'clickEducation', payload: {"tech": false, "exp": false, "education": true}});
 export const processSenEmail = (process) => ({type: 'process', payload: {"sendprocess": process}});
+export const page = (page) => ({type: 'page', payload: {"page": page}});
 
 
 

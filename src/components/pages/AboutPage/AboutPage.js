@@ -13,10 +13,12 @@ import { AnimatePresence, motion } from 'framer-motion';
 
 const AboutPage = () => {
     IsMobilePage();
+    localStorage.setItem('page', 'about');
     const [data, setData] = useState([]);
     const tech = useSelector(state => state.aboutOption.tech);
     const exp = useSelector(state => state.aboutOption.exp);
     const education = useSelector(state => state.aboutOption.education);
+
     console.log('render-ABOUT');
     localStorage.setItem('aboutMeOptions', JSON.stringify({
         "tech": `${tech}`, 
@@ -25,7 +27,6 @@ const AboutPage = () => {
     }));
     const dispatch = useDispatch();
     const {getdata, process, setProcess} =  useMrPanchoService();
-
     // useEffect(() => {
     //     // 'https://projectdata-f0pl.onrender.com/cards'
     //     // 'http://localhost:3000/cards'
@@ -67,35 +68,46 @@ const AboutPage = () => {
 
  useEffect(() => {
         if (tech + '' === 'true') {
+            const techButton = document.getElementById('tech');
             const filterProjectData = ProjectData.filter(item => {
                 if(item.aboutMeCardsTechStack) {
                   return item
                 } else return false
              })
              setData(Object.values(filterProjectData)[0].aboutMeCardsTechStack);
-             
+             setTimeout(() => {
+                techButton.focus();
+             },500) 
         } 
     },[tech]) 
 
     useEffect(() => {
         if (exp + '' === 'true') {
+            const expButton = document.getElementById('exp');
             const filterProjectData = ProjectData.filter(item => {
                 if(item.aboutMeCardsMyExperience) {
                   return item
                 } else return false
              })
              setData(Object.values(filterProjectData)[0].aboutMeCardsMyExperience);
+             setTimeout(() => {
+                expButton.focus();
+             },500)  
         } 
     },[exp]) 
 
     useEffect(() => {
         if (education + '' === 'true') {
+            const educationButton = document.getElementById('education');
             const filterProjectData = ProjectData.filter(item => {
                 if(item.aboutMeCardsMyEducation) {
                   return item
                 } else return false
              })
              setData(Object.values(filterProjectData)[0].aboutMeCardsMyEducation);
+             setTimeout(() => {
+                educationButton.focus();
+             },500)
         } 
     },[education]) 
 
@@ -178,6 +190,7 @@ const AboutPage = () => {
     }
     return (
         <motion.div
+            // key= {data}
             variants={defaultSlide}
             initial='hidden'
             animate='visible'
@@ -195,59 +208,61 @@ const AboutPage = () => {
                 <div className="AboutPage_bg">
                 <h1> About me </h1>
                     <div className="AboutPage_text_buttons">
-                        <button onClick={() => dispatch(clickTech())} 
+                        <button id="tech" onClick={() =>dispatch(clickTech())} 
                         className="d-flex justify-content-center btn btn-primary aboutPageBtn">My Tech Stack</button>
-                        <button onClick={() => dispatch(clickExp())} className="d-flex justify-content-center btn btn-primary aboutPageBtn">My Experiance</button>
-                        <button onClick={() => dispatch(clickEducation())} className="d-flex justify-content-center btn btn-primary aboutPageBtn">My Education</button>
+                        <button id="exp" onClick={() => dispatch(clickExp())} className="d-flex justify-content-center btn btn-primary aboutPageBtn">My Experiance</button>
+                        <button id="education" onClick={() => dispatch(clickEducation())} className="d-flex justify-content-center btn btn-primary aboutPageBtn">My Education</button>
                     </div>
-                    <AnimatePresence> {
-                       tech && (
-                            <motion.div
-                            variants={defaultSlide}
-                            initial='hidden'
-                            animate='visible'
-                            
-                            className='AboutPage_container'
-                        >
-                                    <div className="AboutPage_container">
-                                    {renderCards()}
-                                    </div>
-                            </motion.div>
-                        )
-                    }
-                    </AnimatePresence>
-                    <AnimatePresence> {
-                       exp && (
-                            <motion.div
-                            variants={defaultSlide}
-                            initial='hidden'
-                            animate='visible'
-                           
-                            className='AboutPage_container'
-                        >
-                                    <div className="AboutPage_container">
-                                    {renderCards()}
-                                    </div>
-                            </motion.div>
-                        )
-                    }
-                    </AnimatePresence>
-                    <AnimatePresence> {
-                       education && (
-                            <motion.div
-                            variants={defaultSlide}
-                            initial='hidden'
-                            animate='visible'
-                            
-                            className='AboutPage_container'
-                        >
-                                    <div className="AboutPage_container">
-                                    {renderCards()}
-                                    </div>
-                            </motion.div>
-                        )
-                    }
-                    </AnimatePresence>
+        <AnimatePresence  mode="wait" >         
+            {       
+              (JSON.parse(localStorage.getItem('aboutMeOptions')).tech === 'true') 
+              ? <motion.div
+                       key={data}
+                       variants={defaultSlide}
+                       initial='hidden'
+                       animate='visible'
+                       exit='exit' 
+                       className='AboutPage_container'
+                   >       
+                   <div className="AboutPage_container">
+                         {renderCards()}   
+                   </div>       
+                </motion.div> 
+               : null    
+            }                       
+            { 
+              (JSON.parse(localStorage.getItem('aboutMeOptions')).exp === 'true') 
+              ? <motion.div
+                       key={data}
+                       variants={defaultSlide}
+                       initial='hidden'
+                       animate='visible'
+                       exit='exit' 
+                       className='AboutPage_container'
+                   >       
+                   <div className="AboutPage_container">
+                         {renderCards()}   
+                   </div>       
+                </motion.div> 
+               : null 
+            }          
+            {   
+              (JSON.parse(localStorage.getItem('aboutMeOptions')).education === 'true') 
+              ? <motion.div
+                       key={data}
+                       variants={defaultSlide}
+                       initial='hidden'
+                       animate='visible'
+                       exit='exit' 
+                       className='AboutPage_container'
+                   >       
+                   <div className="AboutPage_container">
+                         {renderCards()}  
+                   </div>       
+                </motion.div> 
+               : null   
+            }  
+        </AnimatePresence>
                 </div>
             </div>
         </motion.div>

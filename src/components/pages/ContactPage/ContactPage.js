@@ -10,7 +10,7 @@ import IsMobilePage from "../../isMobile/isMobilePage";
 import ErrorMessageContactForm from "../../errorMessageContactForm/errorMessageContactForm";
 import Spinner from "../../spinner/Spinner";
 import {defaultSlide} from "../../../FramerMotion/framerMotion.pages.configs"
-import { motion } from 'framer-motion';
+import {AnimatePresence, motion } from 'framer-motion';
 
 
 const setContent = (process, Component) => {
@@ -39,6 +39,7 @@ const ContactPage = () => {
     const process = useSelector(state => state.process.sendprocess);
     
     IsMobilePage();
+    localStorage.setItem('page', 'contact');
     console.log('render-CONTACTME');
     
 let elements = useMemo(() => {
@@ -47,7 +48,9 @@ let elements = useMemo(() => {
 console.log(process);
 
     return (
+        <AnimatePresence mode="wait">
         <motion.div
+            key = {localStorage.getItem('page')}
             variants={defaultSlide}
             initial='hidden'
             animate='visible'
@@ -77,6 +80,7 @@ console.log(process);
         </div>
         {elements}
     </motion.div>
+    </AnimatePresence>
     )
 }
 export default ContactPage;

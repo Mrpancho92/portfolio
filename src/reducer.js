@@ -9,6 +9,9 @@ const initialState = {
     },
     process: {
         sendprocess: 'waiting'
+    },
+    page: {
+      page: localStorage.getItem('page') || 'home'
     }
   };
 const reducer = (state = initialState, action) => {
@@ -57,6 +60,14 @@ const reducer = (state = initialState, action) => {
                 process: {
                   ...state.process,
                   sendprocess: action.payload.sendprocess
+                }
+              };
+        case "page":
+            return {
+                ...state,
+                page: {
+                  ...state.page,
+                  page: action.payload.page
                 }
               };
         default :

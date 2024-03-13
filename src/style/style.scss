@@ -80,9 +80,24 @@ main {
     transform: translate(50px,0);
 }
 
+body {
+    // background-image: url('../resources/bodyImage3.jpg');
+    background: url('../resources/bodyImage.jpg') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+}
+
 .dark {
     body {
-        background-color: #3e3d3d; 
+        // background-image: none;
+        // background-color: #3e3d3d; 
+        background: url('../resources/bodyImageDark.jpg') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
     }
     .react-switch-label { 
         box-shadow: 3px 3px 10px 0px rgba(255, 255, 255, 0.5);
@@ -111,8 +126,6 @@ main {
         color:#e7e5e5;
     }
 
-
-    
     .ContactPage_bg h1, h2 , p {
         color:#e7e5e5;
     }
@@ -144,6 +157,13 @@ main {
         background-color: #3e3d3d;
         border-color: #3e3d3d;
     }
+    // .burger::before {
+    //     box-shadow: 0 11px 0 white;
+    // }
+    // .burger::before,
+    // .burger::after {
+    //     background: white;
+    // }
 }
 
 @keyframes pulse {

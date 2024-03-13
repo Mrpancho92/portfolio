@@ -8,12 +8,26 @@ import IconsBar from "../../iconsBar/IconsBar";
 import avatar from '../../../resources/avatar.jpg';
 import IsMobilePage from "../../isMobile/isMobilePage";
 import {defaultSlide} from "../../../FramerMotion/framerMotion.pages.configs"
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
+import { useEffect, useState } from "react";
 
 const HomePage = () => {
     const counter = useSelector(state => state.counters.firstCounter);
+    // const [key, setKey] = useState(false);
     IsMobilePage();
+    localStorage.setItem('page', 'home');
    
+    useEffect(() => {
+        const navli = document.querySelectorAll('.navLi a');
+        // const ArrayNavLi = [];
+        navli.forEach(item => {
+            item.addEventListener('click', () => {
+                 if (!item.classList.contains('active')) {
+                    console.log('fefbfehrbfherbfeh');
+                 }  
+            });
+        }); 
+    })
     // const localSave = () => {
     //     localStorage.setItem('url', window.location.pathname);  
     // }
@@ -29,7 +43,10 @@ const HomePage = () => {
  
     
     return (
+        <AnimatePresence mode="wait">
+        {
         <motion.div
+            
             variants={defaultSlide}
             initial='hidden'
             animate='visible'
@@ -76,6 +93,8 @@ const HomePage = () => {
                 </div>
             </div>
         </motion.div>
+         }
+        </AnimatePresence>
     )
 }
 // }className="homePage_projectsBtn" href="/projects"

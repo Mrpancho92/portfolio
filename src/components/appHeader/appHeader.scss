@@ -53,6 +53,19 @@
         }
     }
 }
+.navLi .active {
+    color: $main-color;
+    &:before {     
+        content: '';
+        position: absolute;
+        top: 52px;
+        width: 100%;
+        border: 2px solid $main-color;
+        transition: all 0.4s;
+        transform: scale(1); 
+    }  
+}
+
 @media (max-width:575px) { 
    
     .app__menu {
@@ -78,7 +91,7 @@
                 position: relative;
                 margin: 0px ;
                 a:hover {
-                     color: $main-color;
+                     color: white;
                     &:before {     
                         content: '';
                         position: absolute;
@@ -90,5 +103,16 @@
                 }
             }
           }
+    }
+    .navLi .active {
+        color: white;
+        &:before {     
+            content: '';
+                position: absolute;
+                left: 0;
+                top: 70%;
+                width: 100%;
+                border: 2px solid white; 
+        }  
     }
 }

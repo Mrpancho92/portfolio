@@ -9,8 +9,8 @@ import * as resources from '../../../resources';
 import Spinner from "../../spinner/Spinner";
 import ErrorMessage from "../../errorMessage/ErrorMessage";
 import IsMobilePage from "../../isMobile/isMobilePage";
-import {defaultSlide} from "../../../FramerMotion/framerMotion.pages.configs"
-import { motion } from 'framer-motion';
+import {defaultSlide} from "../../../FramerMotion/framerMotion.pages.configs";
+import {AnimatePresence, motion } from 'framer-motion';
 
 
 // {bringitup, marvelLogo, mogo, nativeJs}
@@ -33,7 +33,8 @@ const ProjectPage = () => {
     const [data, setData] = useState([]);
     
     IsMobilePage();
-  
+    localStorage.setItem('page', 'project');
+
     console.log('render-PROJECTS');
     const {getdata, process, setProcess} =  useMrPanchoService();
     useEffect(() => {
@@ -106,7 +107,8 @@ const ProjectPage = () => {
     }
 
     return (
-        
+        <AnimatePresence mode="wait">
+        {
         <motion.div
             variants={defaultSlide}
             initial='hidden'
@@ -130,6 +132,8 @@ const ProjectPage = () => {
                 </div>
             </div>
         </motion.div>
+         }
+         </AnimatePresence>
     )
 }
 export default ProjectPage;

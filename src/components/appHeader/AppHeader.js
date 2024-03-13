@@ -1,5 +1,5 @@
 // import {Link, NavLink} from 'react-router-dom';
-import { React } from 'react';
+import { React, useEffect } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { NavLink } from 'react-router-dom';
 import Switch from '../switch/Switch';
@@ -24,7 +24,7 @@ const AppHeader = () => {
     }
     const dispatch = useDispatch();
     console.log('render-AppHeader');
-   
+    
     return (
         <header className="app__header">
             <Switch
@@ -40,7 +40,7 @@ const AppHeader = () => {
                 { isMobile ?  <BurgerMenu/> :
                 <ul>
                         <li className='navLi'>
-                            <NavLink className="animated" to="/">Home</NavLink>
+                            <NavLink to="/">Home</NavLink>
                         </li>
 
                         <li className='navLi'>
