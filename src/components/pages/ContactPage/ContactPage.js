@@ -1,7 +1,7 @@
 import {useMemo} from "react";
 import ContactForm from "../../contactForm/contactForm";
 import { useSelector } from "react-redux";
-import { Helmet } from "react-helmet";
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 import '../../../style/style.scss';
 import PopupModalLoading from "../../popupModalLoading/PopupModalLoading";
 import IconsBar from "../../iconsBar/IconsBar";
@@ -48,22 +48,22 @@ let elements = useMemo(() => {
 console.log(process);
 
     return (
-        <AnimatePresence mode="wait">
         <motion.div
-            key = {localStorage.getItem('page')}
             variants={defaultSlide}
             initial='hidden'
             animate='visible'
             exit='exit'
             className='ContactPage'
         >
-            <Helmet>
-                <meta
-                    name="description"
-                    content="Pavel Portfolio"
-                />
-                <title>Pavel Portfolio</title>
-            </Helmet>
+            <HelmetProvider>
+                <Helmet>
+                    <meta
+                        name="description"
+                        content="Pavel Portfolio"
+                    />
+                    <title>Pavel Portfolio</title>
+                </Helmet>
+            </HelmetProvider>
             <div className="ContactPage">
                 <div className="ContactPage_bg">
                     <h1> Contact me </h1>
@@ -80,7 +80,6 @@ console.log(process);
         </div>
         {elements}
     </motion.div>
-    </AnimatePresence>
     )
 }
 export default ContactPage;

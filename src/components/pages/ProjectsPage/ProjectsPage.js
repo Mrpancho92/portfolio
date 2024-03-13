@@ -1,5 +1,5 @@
 import { useState, useEffect} from "react";
-import { Helmet } from "react-helmet";
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 import '../../../style/style.scss';
 import './projectsPage.scss';
 import ProjectData from '../../../Assets/projectData/projectData';
@@ -107,8 +107,6 @@ const ProjectPage = () => {
     }
 
     return (
-        <AnimatePresence mode="wait">
-        {
         <motion.div
             variants={defaultSlide}
             initial='hidden'
@@ -116,13 +114,15 @@ const ProjectPage = () => {
             exit='exit'
             className='ProjectPage'
         >
-            <Helmet>
-                <meta
-                    name="description"
-                    content="Pavel Portfolio"
-                />
-                <title>Pavel Portfolio</title>
-            </Helmet>
+            <HelmetProvider>
+                <Helmet>
+                    <meta
+                        name="description"
+                        content="Pavel Portfolio"
+                    />
+                    <title>Pavel Portfolio</title>
+                </Helmet>
+            </HelmetProvider>
             <div className="ProjectPage">
                 <div className="ProjectPage_bg">
                     <h1> My projects </h1>
@@ -132,8 +132,6 @@ const ProjectPage = () => {
                 </div>
             </div>
         </motion.div>
-         }
-         </AnimatePresence>
     )
 }
 export default ProjectPage;

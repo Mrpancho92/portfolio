@@ -1,7 +1,7 @@
 // import { connect } from "react-redux";
 import { useSelector } from "react-redux";
 import {Link} from 'react-router-dom';
-import { Helmet } from "react-helmet";
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 import './HomePage.scss';
 import '../../../style/style.scss';
 import IconsBar from "../../iconsBar/IconsBar";
@@ -17,17 +17,6 @@ const HomePage = () => {
     IsMobilePage();
     localStorage.setItem('page', 'home');
    
-    useEffect(() => {
-        const navli = document.querySelectorAll('.navLi a');
-        // const ArrayNavLi = [];
-        navli.forEach(item => {
-            item.addEventListener('click', () => {
-                 if (!item.classList.contains('active')) {
-                    console.log('fefbfehrbfherbfeh');
-                 }  
-            });
-        }); 
-    })
     // const localSave = () => {
     //     localStorage.setItem('url', window.location.pathname);  
     // }
@@ -43,23 +32,22 @@ const HomePage = () => {
  
     
     return (
-        <AnimatePresence mode="wait">
-        {
-        <motion.div
-            
+        <motion.div 
             variants={defaultSlide}
             initial='hidden'
             animate='visible'
             exit='exit'
             className='homePage_bg'
         >
-            <Helmet>
-                <meta
-                    name="description"
-                    content="Pavel Portfolio"
-                />
-                <title>Pavel Portfolio</title>
-            </Helmet>
+            <HelmetProvider>
+                <Helmet>
+                    <meta
+                        name="description"
+                        content="Pavel Portfolio"
+                    />
+                    <title>Pavel Portfolio</title>
+                </Helmet>
+            </HelmetProvider>
             <div className="homePage_bg">
                 <div className="homePage_container">
                     <div className="avatar_box">
@@ -93,8 +81,6 @@ const HomePage = () => {
                 </div>
             </div>
         </motion.div>
-         }
-        </AnimatePresence>
     )
 }
 // }className="homePage_projectsBtn" href="/projects"

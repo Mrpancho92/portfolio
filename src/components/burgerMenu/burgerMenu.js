@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 import './burgerMenu.scss';
 
 const BurgerMenu = () => {
-console.log('render4');
+console.log('render-burgerMenu');
     return (
         <div className="menu">
             <input type="checkbox" id="burger-checkbox" className="burger-checkbox"/>

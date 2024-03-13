@@ -1,5 +1,5 @@
 // import {Link, NavLink} from 'react-router-dom';
-import { React, useEffect } from 'react';
+import { React } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { NavLink } from 'react-router-dom';
 import Switch from '../switch/Switch';

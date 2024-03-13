@@ -1,4 +1,5 @@
 import React from 'react';
+import { HashRouter } from 'react-router-dom';
 import ReactDOM from 'react-dom/client';
 import {configureStore} from '@reduxjs/toolkit';
 import reducer from './reducer';
@@ -14,10 +15,12 @@ const store = configureStore({
 
   const root = ReactDOM.createRoot(document.getElementById('root'));
   root.render(
-    // <React.StrictMode> 
     <Provider store={store} >
-      <App/>
+      <HashRouter>
+        <React.StrictMode>
+          <App/>
+        </React.StrictMode>
+      </HashRouter>
    </Provider>
-    // </React.StrictMode>
   );
 

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Helmet } from "react-helmet";
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 import '../../../style/style.scss';
 import './AboutPage.scss';
 import ProjectData from '../../../Assets/projectData/projectData';
@@ -190,20 +190,21 @@ const AboutPage = () => {
     }
     return (
         <motion.div
-            // key= {data}
             variants={defaultSlide}
             initial='hidden'
             animate='visible'
             exit='exit'
             className='AboutPage'
         >
-            <Helmet>
-                <meta
-                    name="description"
-                    content="Pavel Portfolio"
-                />
-                <title>Pavel Portfolio</title>
-            </Helmet>
+            <HelmetProvider>
+                <Helmet>
+                    <meta
+                        name="description"
+                        content="Pavel Portfolio"
+                    />
+                    <title>Pavel Portfolio</title>
+                </Helmet>
+            </HelmetProvider>
             <div className="AboutPage">
                 <div className="AboutPage_bg">
                 <h1> About me </h1>

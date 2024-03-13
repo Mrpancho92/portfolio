@@ -3,7 +3,7 @@ import React from 'react';
 import './Switch.scss'
 
 const Switch = ({ isOn, handleToggle }) => {
-  console.log('render3');
+  console.log('render-switch');
   // const switchBox = Array.from(document.getElementsByClassName('react-switch-label'));
   // const colorTextHeader = Array.from(document.getElementsByClassName('navLi'));
     // if (isOn) {
