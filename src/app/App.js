@@ -19,7 +19,6 @@ const App = () => {
                 <AppHeader />
                 <AnimatePresence mode="wait">
                 <motion.div
-                       
                         variants={defaultSlide}
                         initial='hidden'
                         animate='visible'
