@@ -2,7 +2,6 @@ import { Helmet, HelmetProvider } from 'react-helmet-async';
 import '../../../style/style.scss';
 import './projectsPage.scss';
 import ProjectData from '../../../Assets/projectData/projectData';
-import {Link} from 'react-router-dom'
 import * as resources from '../../../resources';
 import IsMobilePage from "../../isMobile/isMobilePage";
 import {defaultSlide} from "../../../FramerMotion/framerMotion.pages.configs";
@@ -88,9 +87,9 @@ const ProjectPage = () => {
                         </div>
                     </div>
                     <div className="Card_btnContainer">
-                        <Link className="d-flex justify-content-center btn btn-primary" to={item.linkWebsite}>Go to the website</Link>
+                        <a className="d-flex justify-content-center btn btn-primary" href={item.linkWebsite} target="blank">Go to the website</a>
                         <br/>
-                        <Link className="d-flex justify-content-center btn btn-primary" to={item.linkGitHubRepo}>GitHub repo</Link>
+                        <a className="d-flex justify-content-center btn btn-primary" href={item.linkGitHubRepo} target="blank">GitHub repo</a>
                     </div>
                 </div>
             </div>

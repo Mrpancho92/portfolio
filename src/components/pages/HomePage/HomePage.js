@@ -46,7 +46,7 @@ const HomePage = () => {
                         </h1>
                         <div className="homePage_purposes">
                             <p className="homePage_paragraph">
-                                Hi, I'm Pavel Antoshin.
+                                Hi, I'm Pavel Antoshin. Привет, меня зовут Павел
                                 <br/>
                                 I am focused on creating web applications with:
                             </p>
