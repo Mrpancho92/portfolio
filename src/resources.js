@@ -17,6 +17,7 @@ import JS from './resources/JS.png';
 import SASS from './resources/SASS.png';
 import TS from './resources/TS.png';
 import router from './resources/Router.png';
+import irvaswindows from './resources/irvaswindows.png';
 
 export {
         marvel, 
@@ -37,5 +38,6 @@ export {
         JS,
         SASS,
         TS,
-        router
+        router,
+        irvaswindows
     };

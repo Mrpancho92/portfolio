@@ -14,24 +14,32 @@ const ProjectData = [
             "projectName": "Bringitup",
             "technologyStack": ["React", "Redux", "React Router", "SCSS modules", "Firebase", "Stripe"],
             "mainFeatures": ["Authentication (Google and email)", "Cart functionality", "Firestore data storage", "React lazy loading", "Stripe payments", "Responsive design"],
-            "linkWebsite": "",
-            "linkGitHubRepo": ""
+            "linkWebsite": "https://mrpancho92.github.io/Project_on_nativeJS_OOP_style/",
+            "linkGitHubRepo": "https://github.com/Mrpancho92/Project_on_nativeJS_OOP_style.git"
         },
         {
             "img": "mogo",
             "projectName": "Mogo",
             "technologyStack": ["Javascript", "CSS", "HTML"],
             "mainFeatures": ["Authentication (Google and email)", "Cart functionality", "Firestore data storage", "React lazy loading", "Stripe payments", "Responsive design"],
-            "linkWebsite": "",
-            "linkGitHubRepo": ""
+            "linkWebsite": "https://mrpancho92.github.io/Mogo-adaptive-layout-Js/",
+            "linkGitHubRepo": "https://github.com/Mrpancho92/Mogo-adaptive-layout-Js.git"
         },
         {
             "img": "nativeJs",
-            "projectName": "nativeJs",
+            "projectName": "КАРТИНЫ.ART",
             "technologyStack": ["Javascript", "CSS", "HTML"],
             "mainFeatures": ["Authentication (Google and email)", "Cart functionality", "Firestore data storage", "React lazy loading", "Stripe payments", "Responsive design"],
-            "linkWebsite": "",
-            "linkGitHubRepo": ""
+            "linkWebsite": "https://mrpancho92.github.io/native_JS_new/",
+            "linkGitHubRepo": "https://github.com/Mrpancho92/native_JS_new.git"
+        },
+        {
+            "img": "irvaswindows",
+            "projectName": "ОСТЕКЛЕНИЕ БАЛКОНОВ",
+            "technologyStack": ["Javascript", "CSS", "HTML", "jquery"],
+            "mainFeatures": ["Authentication (Google and email)", "Cart functionality", "Firestore data storage", "React lazy loading", "Stripe payments", "Responsive design"],
+            "linkWebsite": "https://mrpancho92.github.io/Project_on_nativeJS/",
+            "linkGitHubRepo": "https://github.com/Mrpancho92/Project_on_nativeJS.git"
         }
     ]
 },
