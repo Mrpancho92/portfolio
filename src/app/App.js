@@ -13,22 +13,22 @@ const ContactPage = lazy(() => import('../components/pages/ContactPage/ContactPa
 const App = () => {
     const location = useLocation();
     return (
-            <div className="app">
-                <AppHeader />
-                    <main>
-                        <Suspense fallback={<Spinner/>}>
+        <div className="app">
+            <AppHeader />
+                <main>
+                    <Suspense fallback={<Spinner/>}>
                         <AnimatePresence mode="wait">
-                            <Routes location={location} key={location.key}>
+                            <Routes location={location} key={location.pathname}>
                                 <Route path={"/"} element={<HomePage />} />
                                 <Route path={"/projects"} element={<ProjectPage />} />
                                 <Route path={"/about"} element={ <AboutPage />} />
                                 <Route path={"/contact"} element={<ContactPage />}/>
                                 <Route path="*" element={<Page404 />} />
                             </Routes>
-                            </AnimatePresence> 
-                        </Suspense> 
-                    </main>
-            </div>
+                        </AnimatePresence> 
+                    </Suspense> 
+                </main>
+        </div>
     )
 }
 export default App;
