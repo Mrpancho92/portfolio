@@ -7,7 +7,9 @@ const IconsBar = ({onChange}) => {
         let element = document.querySelector('.homePage_text');
         if (element) {
           const r =  document.querySelector('.iconsBar_iconsContainer');
-                r.style = `width: 90%;`
+                r.style = `
+                margin: 5%;
+                width: 90%;`
         } 
     }, [])
     return (
