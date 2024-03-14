@@ -6,8 +6,8 @@ const ProjectData = [
             "projectName": "Marvel",
             "technologyStack": ["React", "Redux", "React Router", "SCSS modules", "Firebase", "Stripe"],
             "mainFeatures": ["Authentication (Google and email)", "Cart functionality", "Firestore data storage", "React lazy loading", "Stripe payments", "Responsive design"],
-            "linkWebsite": "https://mrpancho92.github.io/marvel/",
-            "linkGitHubRepo": "https://github.com/Mrpancho92/marvel"
+            "linkWebsite": "https://mrpancho92.github.io/Marvel-on-Hooks/",
+            "linkGitHubRepo": "https://github.com/Mrpancho92/Marvel-on-Hooks.git"
         },
         {
             "img": "bringitup",
