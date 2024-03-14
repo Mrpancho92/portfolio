@@ -1,16 +1,12 @@
-import { useState, useEffect} from "react";
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import '../../../style/style.scss';
 import './projectsPage.scss';
 import ProjectData from '../../../Assets/projectData/projectData';
 import {Link} from 'react-router-dom'
-import useMrPanchoService from "../../../services/MrPanchoService";
 import * as resources from '../../../resources';
-import Spinner from "../../spinner/Spinner";
-import ErrorMessage from "../../errorMessage/ErrorMessage";
 import IsMobilePage from "../../isMobile/isMobilePage";
 import {defaultSlide} from "../../../FramerMotion/framerMotion.pages.configs";
-import {AnimatePresence, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 
 // {bringitup, marvelLogo, mogo, nativeJs}
@@ -30,19 +26,19 @@ import {AnimatePresence, motion } from 'framer-motion';
 // }
 
 const ProjectPage = () => {
-    const [data, setData] = useState([]);
+    // const [data, setData] = useState([]);
     
     IsMobilePage();
     localStorage.setItem('page', 'project');
 
     console.log('render-PROJECTS');
-    const {getdata, process, setProcess} =  useMrPanchoService();
-    useEffect(() => {
+    // const {getdata, process, setProcess} =  useMrPanchoService();
+    // useEffect(() => {
         // 'https://projectdata-f0pl.onrender.com/cards'
         // 'http://localhost:3000/cards'
         // getdata('../../../Assets/db.json').then(onLoaded).then(() => setProcess('confirmed'))
 
-    }, [])
+    // }, [])
     // const onLoaded = (list) => {
     //     setData(list);  
     // }

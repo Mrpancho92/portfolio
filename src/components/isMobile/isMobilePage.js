@@ -54,9 +54,6 @@ const IsMobilePage = () => {
                 burger.style = ``;
             });
        });
-    }
-  
-
-   
+    }  
 }
 export default IsMobilePage;

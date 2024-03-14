@@ -8,29 +8,12 @@ import IconsBar from "../../iconsBar/IconsBar";
 import avatar from '../../../resources/avatar.jpg';
 import IsMobilePage from "../../isMobile/isMobilePage";
 import {defaultSlide} from "../../../FramerMotion/framerMotion.pages.configs"
-import { AnimatePresence, motion } from 'framer-motion';
-import { useEffect, useState } from "react";
+import { motion } from 'framer-motion';
 
 const HomePage = () => {
     const counter = useSelector(state => state.counters.firstCounter);
-    // const [key, setKey] = useState(false);
     IsMobilePage();
     localStorage.setItem('page', 'home');
-   
-    // const localSave = () => {
-    //     localStorage.setItem('url', window.location.pathname);  
-    // }
-    // localSave();
-
-    // useEffect(() => {
-    //     console.log(state);
-    //     if (state === true) {
-           
-    //         window.location.href = 'http://localhost:3000'; 
-    //     } 
-    // },[state])
- 
-    
     return (
         <motion.div 
             variants={defaultSlide}

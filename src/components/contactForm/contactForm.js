@@ -34,6 +34,7 @@ const ContactForm = () => {
     if ( process === 'error') {
         dispatch(processSenEmail('error')); 
         setTimeout(() => {
+            clickForm.blur();
             dispatch(processSenEmail('waiting'));
         },2000)
     } 

@@ -1,4 +1,3 @@
-import Spinner from "../spinner/Spinner";
 import './popupModalLoading.scss';  
 
 const PopupModalLoading = () => {

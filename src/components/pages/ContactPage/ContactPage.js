@@ -10,7 +10,7 @@ import IsMobilePage from "../../isMobile/isMobilePage";
 import ErrorMessageContactForm from "../../errorMessageContactForm/errorMessageContactForm";
 import Spinner from "../../spinner/Spinner";
 import {defaultSlide} from "../../../FramerMotion/framerMotion.pages.configs"
-import {AnimatePresence, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 
 const setContent = (process, Component) => {

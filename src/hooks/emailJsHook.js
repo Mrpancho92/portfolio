@@ -9,7 +9,7 @@ export const useEmailJs = () => {
         setProcess('loading');
 
         // Данные для работы с emailjs
-        const serviceID = 'service_qjtpa1i';
+        const serviceID = 'service_qjtpa1i--';
         const templateID = 'template_dn8astt';
         const options = {
             publicKey: 'zGqZVWGaVG3aLfQap',
@@ -70,6 +70,7 @@ export const useEmailJs = () => {
             (error) => {
               console.log('FAILED...', error.text);
               setProcess('error');
+              // clickForm.blur();
               form.current.reset();
             },
           );

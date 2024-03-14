@@ -4,7 +4,6 @@ import '../../../style/style.scss';
 import './AboutPage.scss';
 import ProjectData from '../../../Assets/projectData/projectData';
 import * as resources from '../../../resources';
-import useMrPanchoService from "../../../services/MrPanchoService";
 import IsMobilePage from "../../isMobile/isMobilePage";
 import { clickTech, clickExp, clickEducation } from '../../../actions';
 import { useSelector, useDispatch } from 'react-redux';
@@ -26,7 +25,7 @@ const AboutPage = () => {
         "education": `${education}`
     }));
     const dispatch = useDispatch();
-    const {getdata, process, setProcess} =  useMrPanchoService();
+    // const {getdata, process, setProcess} =  useMrPanchoService();
     // useEffect(() => {
     //     // 'https://projectdata-f0pl.onrender.com/cards'
     //     // 'http://localhost:3000/cards'
