@@ -9,7 +9,7 @@ export const useEmailJs = () => {
         setProcess('loading');
 
         // Данные для работы с emailjs
-        const serviceID = 'service_qjtpa1i1111';
+        const serviceID = 'service_qjtpa1i';
         const templateID = 'template_dn8astt';
         const options = {
             publicKey: 'zGqZVWGaVG3aLfQap',
