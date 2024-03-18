@@ -80,20 +80,20 @@ main {
 }
 
 body {
-    background: url('../resources/bodyImage.jpg') no-repeat center center fixed;
-        // -webkit-background-size: contain;
-        // -moz-background-size: contain;
-        // -o-background-size: contain;
-        // background-size: contain;
+    background: url('../resources/bodyImage.jpg') no-repeat center fixed;
+        -webkit-background-size: 100%;
+        -moz-background-size: 100%;
+        -o-background-size: 100%;
+        background-size: 100%;
 }
 
 .dark {
     body {
-        background: url('../resources/bodyImageDark.jpg') no-repeat center center fixed;
-        // -webkit-background-size: contain;
-        // -moz-background-size: contain;
-        // -o-background-size: contain;
-        // background-size: contain;
+        background: url('../resources/bodyImageDark.jpg') no-repeat center fixed;
+        -webkit-background-size: 100%;
+        -moz-background-size: 100%;
+        -o-background-size: 100%;
+        background-size: 100%;
     }
     .react-switch-label { 
         box-shadow: 3px 3px 10px 0px rgba(255, 255, 255, 0.5);
