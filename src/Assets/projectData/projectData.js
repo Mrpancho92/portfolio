@@ -3,7 +3,7 @@ const ProjectData = [
     "cards": [
         {
             "img": "marvel",
-            "projectName": "Marvel",
+            "projectName": "Marvel (desktop only)",
             "technologyStack": ["React", "Redux", "React Router", "SCSS modules", "Firebase", "Stripe"],
             "mainFeatures": ["Authentication (Google and email)", "Cart functionality", "Firestore data storage", "React lazy loading", "Stripe payments", "Responsive design"],
             "linkWebsite": "https://mrpancho92.github.io/Marvel-on-Hooks/",
@@ -11,11 +11,19 @@ const ProjectData = [
         },
         {
             "img": "bringitup",
-            "projectName": "Bringitup",
+            "projectName": "Bringitup (desktop only)",
             "technologyStack": ["React", "Redux", "React Router", "SCSS modules", "Firebase", "Stripe"],
             "mainFeatures": ["Authentication (Google and email)", "Cart functionality", "Firestore data storage", "React lazy loading", "Stripe payments", "Responsive design"],
             "linkWebsite": "https://mrpancho92.github.io/Project_on_nativeJS_OOP_style/",
             "linkGitHubRepo": "https://github.com/Mrpancho92/Project_on_nativeJS_OOP_style.git"
+        },
+        {
+            "img": "uilib",
+            "projectName": "Ui_Lib_JS",
+            "technologyStack": ["Javascript", "CSS", "HTML"],
+            "mainFeatures": ["Authentication (Google and email)", "Cart functionality", "Firestore data storage", "React lazy loading", "Stripe payments", "Responsive design"],
+            "linkWebsite": "",
+            "linkGitHubRepo": "https://github.com/Mrpancho92/UI_library_JS.git"
         },
         {
             "img": "mogo",
@@ -27,7 +35,7 @@ const ProjectData = [
         },
         {
             "img": "nativeJs",
-            "projectName": "КАРТИНЫ.ART",
+            "projectName": "КАРТИНЫ.ART (desktop only)",
             "technologyStack": ["Javascript", "CSS", "HTML"],
             "mainFeatures": ["Authentication (Google and email)", "Cart functionality", "Firestore data storage", "React lazy loading", "Stripe payments", "Responsive design"],
             "linkWebsite": "https://mrpancho92.github.io/native_JS_new/",

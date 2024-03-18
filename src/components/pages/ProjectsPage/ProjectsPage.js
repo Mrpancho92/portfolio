@@ -61,6 +61,12 @@ const ProjectPage = () => {
                  <li key={index}>{item}</li>
                 )
              })
+             let buttonClass = '';
+             if (!item.linkWebsite) {
+                buttonClass = "d-flex justify-content-center btn btn-primary d-none";
+             } else {
+                buttonClass = "d-flex justify-content-center btn btn-primary";
+             }
             return (
             <div key={index} className="ProjectPage_wrap">
                 <div className="ProjectPage_card">
@@ -87,7 +93,7 @@ const ProjectPage = () => {
                         </div>
                     </div>
                     <div className="Card_btnContainer">
-                        <a className="d-flex justify-content-center btn btn-primary" href={item.linkWebsite} target="blank">Go to the website</a>
+                        <a className={buttonClass} href={item.linkWebsite} target="blank" >Go to the website</a>
                         <br/>
                         <a className="d-flex justify-content-center btn btn-primary" href={item.linkGitHubRepo} target="blank">GitHub repo</a>
                     </div>
