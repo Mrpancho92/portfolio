@@ -2,10 +2,10 @@ const ErrorMessageContactForm = () => {
     return (
         <div className="popupModalLoading">
                 <p>Ошибка при отправке....!
-                    <span class="ec ec-x"></span>
-                <br/>
-                    <div>Повторная отправка возможна через 10с.</div>
-               </p> 
+                    <span className="ec ec-x"></span>
+                    <br/>
+                Повторная отправка возможна через 10с.
+                </p> 
         </div>
     ) 
 }

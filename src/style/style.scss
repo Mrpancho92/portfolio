@@ -153,6 +153,10 @@ body {
         background-color: #3e3d3d;
         border-color: #3e3d3d;
     }
+    .spinner svg path {
+        fill: #FFFFFF; 
+        stroke: #FFFFFF; 
+    }
 }
 
 @keyframes pulse {

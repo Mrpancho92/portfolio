@@ -15,29 +15,44 @@ const ContactForm = () => {
     },[])
 
     useEffect(() => {
-        if (process === 'confirmed' || process === 'error') {
+        if (process === 'confirmed') {
             dispatch(processSenEmail(process));
-            setProcess('waiting');
+            // setProcess('waiting');
+            // setProcess('loading');
         } 
-    })
+        if ( process === 'loading') {
+            dispatch(processSenEmail('loading'));
+        } 
+        if ( process === 'error') {
+            dispatch(processSenEmail('error'));
+        }
+    },[process, dispatch])
 
     if ( processs === 'confirmed') {
         setTimeout(() => {
             dispatch(processSenEmail('waiting'));
         },2000)
     } 
-    useEffect(() => {
-        if ( process === 'loading') {
-            dispatch(processSenEmail('loading'));
-    } 
-    })
-    if ( process === 'error') {
-        dispatch(processSenEmail('error')); 
+    // useEffect(() => {
+    //     if ( process === 'loading') {
+    //         dispatch(processSenEmail('loading'));
+    // } 
+    // })
+    // useEffect(() => {
+    //     if ( process === 'error') {
+    //         dispatch(processSenEmail('error'));
+    // } 
+    // })
+    if ( processs === 'error') {
+        // dispatch(processSenEmail('error')); 
+        // console.log('вот сюда в ерорр');
         setTimeout(() => {
             clickForm.blur();
             dispatch(processSenEmail('waiting'));
+            setProcess('waiting');
         },2000)
     } 
+
     return (
         <div className="form">
             <div className="form_contaiter">

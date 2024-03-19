@@ -28,13 +28,7 @@
 //     font-weight: 400;
 //     font-size: 24px;
 // }
-.positionSpinner {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 1;
-    transform: translate(-50%, -50%);
-}
+
 @media (max-width:1112px) { 
     .popupModalLoading {
         top: 42%;
