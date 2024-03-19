@@ -79,21 +79,22 @@ main {
     transform: translate(50px,0);
 }
 
-body {
-    background: url('../resources/bodyImage.jpg') no-repeat center fixed;
-        -webkit-background-size: 100% 100%;
-        -moz-background-size: 100% 100%;
-        -o-background-size: 100% 100%;
-        background-size: 100% 100%;
-}
+// body {
+//     background: url('../resources/bodyImage.jpg') no-repeat center fixed;
+//         -webkit-background-size: 100% 100%;
+//         -moz-background-size: 100% 100%;
+//         -o-background-size: 100% 100%;
+//         background-size: 100% 100%;
+// }
 
 .dark {
     body {
-        background: url('../resources/bodyImageDark.jpg') no-repeat center fixed;
-        -webkit-background-size: 100% 100%;
-        -moz-background-size: 100% 100%;
-        -o-background-size: 100% 100%;
-        background-size: 100% 100%;
+        background-color:#3e3d3d;
+        // background: url('../resources/bodyImageDark.jpg') no-repeat center fixed;
+        // -webkit-background-size: 100% 100%;
+        // -moz-background-size: 100% 100%;
+        // -o-background-size: 100% 100%;
+        // background-size: 100% 100%;
     }
     .react-switch-label { 
         box-shadow: 3px 3px 10px 0px rgba(255, 255, 255, 0.5);
