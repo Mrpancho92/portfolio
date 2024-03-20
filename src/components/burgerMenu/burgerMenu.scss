@@ -13,7 +13,7 @@
     top: 20px;
     width: 40px;
     height: 26px;
-    right: 6vw;
+    right: 3vw;
     z-index: 2;
   }
   .burger::before,
@@ -55,8 +55,19 @@
     margin: 0;
     background:#3e3d3d;
     list-style-type: none;
-    transition: 0.3s;
-    transform: translateX(100%);
+
+    -webkit-transition: -webkit-transform 0.3s ease-in-out;
+    -moz-transition: -moz-transform 0.3s ease-in-out;
+    -ms-transition: -ms-transform 0.3s ease-in-out;
+    -o-transition: -o-transform 0.3s ease-in-out;
+    transition:  transform 0.3s ease-in-out;
+    
+    -webkit-transform: translate(100%,0);
+    -moz-transform: translate(100%,0);
+    -ms-transform: translate(100%,0);
+    -o-transform: translate(100%,0);
+    transform: translate(100%,0);
+
     height: 100vh;
     width: 200px;
     z-index: 2;
@@ -75,7 +86,11 @@
     background: rgba(255,255,255,.2)
   }
   .burger-checkbox:checked ~ .menu-list {  
-    transform: translateX(0%);
+    -webkit-transform: translate(0,0);
+    -moz-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    -o-transform: translate(0,0);
+    transform: translate(0,0); 
   }
 
 
