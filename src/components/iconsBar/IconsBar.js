@@ -34,7 +34,7 @@ const IconsBar = ({onChange}) => {
             const r =  document.querySelector('.iconsBar_iconsContainer');
                   r.style = `
                   margin: 1%;
-                  width: 100%;`
+                  width: 98%;`
           } 
     }, [isMobile])
     return (
