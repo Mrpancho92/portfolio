@@ -1,17 +1,18 @@
-.homePage_bg {
-    
-}
 .homePage_primaryHeading {
    margin-bottom: 10px;
 }
+.homePage_primaryHeading div {  
+    text-align: center;
+    font-size: 3rem;
+ }
 .homePage_container {
     display: flex;
     justify-content: center;  
 }
 .avatar_box {
     position: relative;
-    height: 300px;
-    width: 300px;
+    height: 335px;
+    width: 335px;
     border-radius: 50%;
     overflow: hidden; 
     transition: transform 1s;
@@ -29,7 +30,7 @@
 }
 
 .homePage_text {
-    margin-left: 40px;
+    margin: 0 30px 0 30px;
     display: flex;
     flex-direction: column;
     justify-content: space-between; 
@@ -38,12 +39,30 @@
 .homePage_featuresList {
     margin-left:20px; 
     margin-bottom: 10px; 
+    font-size: 1.2rem;
 }
 .homePage_feature {
     list-style-type: disc;
 }
 .homePage_paragraph {
     margin-bottom: 5px;
+    font-size: 1.2rem;
+    width: 40vw;
+}
+.homePage_projectsBtn {
+    font-size: 1.2rem;
+    width: 16vw;
+}
+
+@media (max-width:1000px) { 
+    .homePage_projectsBtn {
+        width: 50%;
+}
+}
+@media (max-width:760px) { 
+    .homePage_projectsBtn {
+        width: 80%;
+}
 }
 
 @media (max-width:575px) { 
@@ -51,25 +70,49 @@
         display: grid;
         grid-template-rows: repeat(2, auto);  
     }
-   
+    .homePage_paragraph {
+        font-size: 1.1rem;
+        width: 80vw;
+    }
     .homePage_primaryHeading {
         text-align: center;
         margin: 10px;
     }
+    .homePage_primaryHeading div {
+        font-size: 2rem;
+    }
     .homePage_purposes {
-        text-align: center; 
+        text-align: center;
+        margin: 0 10px 0 10px;
     }
     .homePage_projectsBtn {
         text-align: center;
         margin: 10px;
+        font-size: 1.1rem;
+        width: 100%;
     }
     .homePage_featuresList {
         margin: 10px;
+        font-size: 1.1rem;
     }
     .avatar_box {
-        margin: 10px;
+        margin: 0 auto;
     }
     .homePage_text {
         margin: 10px;
+        // width: 100%;
+    }
+}
+@media (max-width:362px) { 
+    .homePage_projectsBtn {
+        width: 95%;
+    }
+    .homePage_paragraph {
+        width: 90vw;
+    }
+    .avatar_box {
+        margin: 0 auto;
+        height: 280px;
+        width: 280px;
     }
 }

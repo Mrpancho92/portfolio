@@ -60,7 +60,7 @@ const ContactForm = () => {
                     clearError(); send(e, form, clickForm)}}>
                     <Form.Group className="mb-3 form_emailText" controlId="exampleForm.ControlInput1">
                         <Form.Label>Email address</Form.Label>
-                        <Form.Control className="form_email" type="email" name="from_name" placeholder="name@example.com" />
+                        <Form.Control className="form_email" type="email" name="from_name" placeholder="Your email"/>
                     </Form.Group>
                     <Form.Group className="mb-3 form_textareaText" controlId="exampleForm.ControlTextarea1">
                         <Form.Label>Your message...</Form.Label>

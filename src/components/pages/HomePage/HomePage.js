@@ -40,23 +40,27 @@ const HomePage = () => {
                             color: counter ? '#ffffff' : ''
                          }}>
                         <h1 className="homePage_primaryHeading">
-                            Front-end
-                            <br/>
-                            Web Developer
+                            <div>Front-end</div>
+                            <div>Web Developer</div>
                         </h1>
                         <div className="homePage_purposes">
                             <p className="homePage_paragraph">
-                                Hi, I'm Pavel Antoshin. Привет, меня зовут Павел
+                                Привет, меня зовут Павел.
                                 <br/>
-                                I am focused on creating web applications with:
+                                Как Junior Front-End разработчик, 
+                                я обладаю навыками в HTML, CSS, JavaScript и React. 
+                                Мой опыт заключается в создании динамичных, 
+                                привлекательных приложений путем написания 
+                                оптимизированного кода с использованием 
+                                передовых инструментов и методов разработки.
                             </p>
-                            <ul className="homePage_featuresList">
+                            {/* <ul className="homePage_featuresList">
                                 <li className="homePage_feature">Optimized performance</li>
                                 <li className="homePage_feature">Responsive layouts</li>
                                 <li className="homePage_feature">Intuitive UX/UI designs</li>
-                            </ul>
+                            </ul> */}
                         </div>
-                        <Link className="d-flex justify-content-center mb-3 btn btn-primary homePage_projectsBtn" 
+                        <Link className="d-flex mt-2 mb-2 justify-content-center btn btn-primary homePage_projectsBtn" 
                         to="/projects">See my projects
                         </Link>
                         <IconsBar onChange={counter}/>

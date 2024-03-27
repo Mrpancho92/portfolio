@@ -18,6 +18,9 @@ import SASS from './resources/SASS.png';
 import TS from './resources/TS.png';
 import router from './resources/Router.png';
 import irvaswindows from './resources/irvaswindows.png';
+import uilib from './resources/uilib.png';
+import fulljsreact from './resources/fulljsreact.png';
+import practicjs from './resources/practicjs.png';
 
 export {
         marvel, 
@@ -39,5 +42,8 @@ export {
         SASS,
         TS,
         router,
-        irvaswindows
+        irvaswindows,
+        uilib,
+        fulljsreact,
+        practicjs
     };

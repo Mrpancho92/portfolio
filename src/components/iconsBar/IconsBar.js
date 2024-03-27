@@ -1,15 +1,34 @@
 import { useEffect } from 'react';
 import './iconsBar.scss';
 import { Envelope, Github, Telegram, Whatsapp } from 'react-bootstrap-icons';
+import { useMediaQuery } from 'react-responsive';
 
 const IconsBar = ({onChange}) => {
+    const isMobile = useMediaQuery({ query: `(max-width: 575px)` });
+    if (isMobile) {
+        let element = document.querySelector('.homePage_text');
+        if (element) {
+          const r =  document.querySelector('.iconsBar_iconsContainer');
+                r.style = `
+                margin: 1%;
+                width: 100%;`
+        } 
+    } else {
+        let element = document.querySelector('.homePage_text');
+        if (element) {
+          const r =  document.querySelector('.iconsBar_iconsContainer');
+                r.style = `
+                margin: 1%;
+                width: 39%;`
+        }  
+    }
     useEffect(() => {
         let element = document.querySelector('.homePage_text');
         if (element) {
           const r =  document.querySelector('.iconsBar_iconsContainer');
                 r.style = `
-                margin: 5%;
-                width: 90%;`
+                margin: 1%;
+                width: 39%;`
         } 
     }, [])
     return (
