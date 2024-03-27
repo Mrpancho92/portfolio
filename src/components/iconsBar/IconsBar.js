@@ -30,7 +30,13 @@ const IconsBar = ({onChange}) => {
                 margin: 1%;
                 width: 39%;`
         } 
-    }, [])
+        if (element && isMobile) {
+            const r =  document.querySelector('.iconsBar_iconsContainer');
+                  r.style = `
+                  margin: 1%;
+                  width: 100%;`
+          } 
+    }, [isMobile])
     return (
         <div className="iconsBar_iconsContainer">
             <a href="mailto:mrpancho@mail.ru">
