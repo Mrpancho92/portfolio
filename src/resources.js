@@ -22,6 +22,7 @@ import uilib from "./resources/uilib.png";
 import fulljsreact from "./resources/fulljsreact.png";
 import practicjs from "./resources/practicjs.png";
 import beautyAdmin from "./resources/beautyAdmin.png";
+import Certificate from "./resources/Certificate.pdf";
 
 export {
   marvel,
@@ -48,4 +49,5 @@ export {
   fulljsreact,
   practicjs,
   beautyAdmin,
+  Certificate,
 };
