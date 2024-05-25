@@ -180,7 +180,10 @@ const AboutPage = () => {
                 </div>
               </div>
               {item.cardName === "2024: Полный курс по Typescript" ? (
-                <button onClick={() => window.open(resources.Certificate)}>
+                <button
+                  className="d-flex btn btn-primary"
+                  onClick={() => window.open(resources.Certificate)}
+                >
                   Open Certificate
                 </button>
               ) : null}
