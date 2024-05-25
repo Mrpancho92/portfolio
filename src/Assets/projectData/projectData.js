@@ -2,6 +2,31 @@ const ProjectData = [
   {
     cards: [
       {
+        img: "beautyAdmin",
+        projectName: "Beauty Admin (desktop only)",
+        technologyStack: [
+          "React",
+          "TypeScript",
+          "RouterProvider",
+          "dayjs",
+          "Calendar",
+          "useContext",
+          "Custom hooks",
+          "HTTP requests",
+        ],
+        mainFeatures: [
+          "Uploading cards from the json server",
+          "Customer cards",
+          "Adding clients via the form",
+          "Page with active entries",
+          "Page with the record history",
+          "Using the calendar to filter entries",
+          "Setting the timer",
+        ],
+        linkWebsite: "",
+        linkGitHubRepo: "https://github.com/Mrpancho92/my-app.git",
+      },
+      {
         img: "marvel",
         projectName: "Marvel information portal (desktop only)",
         technologyStack: [
@@ -207,6 +232,7 @@ const ProjectData = [
           "Typescript.Generics and type manipulations (время - 4ч.38мин.2сек.)",
           "Typescript.Классы (время - 2ч.40мин.5сек.)",
           "Typescript.Декораторы и конфигурация (время - 4ч.54мин.3сек.)",
+          "Typescript + React.Большая практика (время - 8ч.20мин.33сек.)",
         ],
       },
       {

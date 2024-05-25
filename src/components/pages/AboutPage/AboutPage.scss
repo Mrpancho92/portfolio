@@ -86,6 +86,10 @@
 .AboutPage_Card_content_bg {
     margin-left: 5%;
 }
+.otherImg .img_projects_cards {
+    max-width: 320px;
+    max-height: 250px;
+}
 @media (max-width:575px) { 
     .AboutPage {
         margin: 0;
