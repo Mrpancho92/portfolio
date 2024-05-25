@@ -179,6 +179,11 @@ const AboutPage = () => {
                   </div>
                 </div>
               </div>
+              {item.cardName === "2024: Полный курс по Typescript" ? (
+                <button onClick={() => window.open(resources.beautyAdmin)}>
+                  Certificate
+                </button>
+              ) : null}
             </div>
           </div>
         </div>
