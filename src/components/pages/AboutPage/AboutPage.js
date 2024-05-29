@@ -158,7 +158,14 @@ const AboutPage = () => {
               {/* <div className="Card_image" style={{backgroundImage: `url(${photo()})`}}></div> */}
               {photo()}
             </div>
-            <div className="AboutPage_Card_content_bg">
+            <div
+              className={
+                item.cardName === "Frameworks:" ||
+                item.cardName === "Programming/Markup languages:"
+                  ? "AboutPage_Card_content_bg_stack"
+                  : "AboutPage_Card_content_bg"
+              }
+            >
               <div className="AboutPage_Card_content">
                 <h2 className="AboutPage_Card_projectName">{item.cardName}</h2>
                 <div className="AboutPage_Card_listContainer">

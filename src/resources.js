@@ -15,7 +15,7 @@ import HTML from "./resources/HTML.png";
 import CSS from "./resources/CSS.png";
 import JS from "./resources/JS.png";
 import SASS from "./resources/SASS.png";
-import TS from "./resources/TS.png";
+import TScourse from "./resources/TScourse.png";
 import router from "./resources/Router.png";
 import irvaswindows from "./resources/irvaswindows.png";
 import uilib from "./resources/uilib.png";
@@ -23,6 +23,8 @@ import fulljsreact from "./resources/fulljsreact.png";
 import practicjs from "./resources/practicjs.png";
 import beautyAdmin from "./resources/beautyAdmin.png";
 import Certificate from "./resources/Certificate.pdf";
+import TS from "./resources/TS.png";
+import campfire from "./resources/campfire.png";
 
 export {
   marvel,
@@ -42,7 +44,7 @@ export {
   CSS,
   JS,
   SASS,
-  TS,
+  TScourse,
   router,
   irvaswindows,
   uilib,
@@ -50,4 +52,6 @@ export {
   practicjs,
   beautyAdmin,
   Certificate,
+  TS,
+  campfire,
 };

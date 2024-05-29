@@ -162,6 +162,19 @@ const ProjectData = [
   {
     aboutMeCardsMyExperience: [
       {
+        cardName: "2023-2024: Сampfire-school",
+        img: ["campfire"],
+        positionAtWork: "Web-developer",
+        description: [
+          "Создание административной панели для салона красоты с использованием React + TypeScript",
+          "Разработка приложений с использованием библиотеки React",
+          "Создание веб-страниц на чистом JS",
+          "Создание веб-страниц на чистом JS в ООП стиле",
+          "Создание JavaScript UI библиотеки",
+          "Создание веб-страниц на HTML и CSS",
+        ],
+      },
+      {
         cardName: "2021-2022: Relyde-Project",
         img: ["relyde"],
         positionAtWork: "Инженер-проектировщик ЭОМ",
@@ -224,15 +237,15 @@ const ProjectData = [
     aboutMeCardsMyEducation: [
       {
         cardName: "2024: Полный курс по Typescript",
-        img: ["TS"],
+        img: ["TScourse"],
         positionEducation: "",
         description: [
-          "Typescript.Базовые знания (время - 3ч.2мин.21сек.)",
-          "Typescript.Необходимый уровень (время - 4ч.43мин.30сек.)",
-          "Typescript.Generics and type manipulations (время - 4ч.38мин.2сек.)",
-          "Typescript.Классы (время - 2ч.40мин.5сек.)",
-          "Typescript.Декораторы и конфигурация (время - 4ч.54мин.3сек.)",
-          "Typescript + React.Большая практика (время - 8ч.20мин.33сек.)",
+          "TypeScript.Базовые знания (время - 3ч.2мин.21сек.)",
+          "TypeScript.Необходимый уровень (время - 4ч.43мин.30сек.)",
+          "TypeScript.Generics and type manipulations (время - 4ч.38мин.2сек.)",
+          "TypeScript.Классы (время - 2ч.40мин.5сек.)",
+          "TypeScript.Декораторы и конфигурация (время - 4ч.54мин.3сек.)",
+          "TypeScript + React.Большая практика (время - 8ч.20мин.33сек.)",
         ],
       },
       {
