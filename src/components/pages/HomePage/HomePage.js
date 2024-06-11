@@ -40,8 +40,8 @@ const HomePage = () => {
             }}
           >
             <h1 className="homePage_primaryHeading">
-              <div>Front-end</div>
-              <div>Web Developer</div>
+              <div>Frontend developer</div>
+              <div></div>
             </h1>
             <div className="homePage_purposes">
               <p className="homePage_paragraph">
